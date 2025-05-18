@@ -1,0 +1,134 @@
+**Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+**Context Chunks:**
+
+--- Context Source 1 ---
+e semi-gradient form of Q-learning. TD-Gammon estimated the values of
+
+442
+Chapter 16: Applications and Case Studies
+afterstates, which were easily obtained from the rules for making backgammon moves. To use the same algorithm for the Atari games would have required generating the next
+states for each possible action (which would not have been afterstates in that case). This could have been done by using the game emulator to run single-step simulations
+for all the possible actions (which ALE makes possible). Or a model of each game’s
+state-transition function could have been learned and used to predict next states (Oh,
+Guo, Lee, Lewis, and Singh, 2015). While these methods might have produced results
+comparable to DQN’s, they would have been more complicated to implement and would
+have signiﬁcantly increased the time needed for learning. Another motivation for using
+Q-learning was that DQN used the experience replay method, described below, which
+requires an oﬀ-policy algorithm. Being model-free and oﬀ-policy made Q-learning a
+natural choice. Before describing the details of DQN and how the experiments were conducted, we look
+at the skill levels DQN was able to achieve. Mnih et al. compared the scores of DQN with
+the scores of the best performing learning system in the literature at the time, the scores
+of a professional human games tester, and the scores of an agent that selected actions
+at random. The best system from the literature used linear function approximation
+with features hand designed using some knowledge about Atari 2600 games (Bellemare,
+Naddaf, Veness, and Bowling, 2013). DQN learned on each game by interacting with the
+game emulator for 50 million frames, which corresponds to about 38 days of experience
+with the game. At the start of learning on each game, the weights of DQN’s network
+were reset to random values.
+
+--- Context Source 2 ---
+experience replay ﬁrst studied by Lin (1992). This method stores the
+agent’s experience at each time step in a replay memory that is accessed to perform the
+weight updates. It worked like this in DQN. After the game emulator executed action
+At in a state represented by the image stack St, and returned reward Rt+1 and image
+stack St+1, it added the tuple (St, At, Rt+1, St+1) to the replay memory. This memory
+accumulated experiences over many plays of the same game. At each time step multiple
+Q-learning updates—a mini-batch—were performed based on experiences sampled uni-
+formly at random from the replay memory. Instead of St+1 becoming the new St for
+the next update as it would in the usual form of Q-learning, a new unconnected expe-
+rience was drawn from the replay memory to supply data for the next update. because
+Q-learning is an oﬀ-policy algorithm, it does not need to be applied along connected
+trajectories. Q-learning with experience replay provided several advantages over the usual form of
+Q-learning. The ability to use each stored experience for many updates allowed DQN to
+learn more eﬃciently from its experiences. Experience replay reduced the variance of the
+updates because successive updates were not correlated with one another as they would
+be with standard Q-learning. And by removing the dependence of successive experiences
+on the current weights, experience replay eliminated one source of instability. Mnih et al. modiﬁed standard Q-learning in a second way to improve its stability. As in other methods that bootstrap, the target for a Q-learning update depends on the
+current action-value function estimate. When a parameterized function approximation
+method is used to represent action values, the target is a function of the same param-
+eters that are being updated. For example, the target in the update given by (16.3) is
+γ maxa ˆq(St+1, a, wt).
+
+--- Context Source 3 ---
+ 1;
+see Chapter 12) but often bootstrapping greatly increases eﬃciency. It is an ability that
+we would very much like to keep in our toolkit. Finally, there is oﬀ-policy learning; can we give that up? On-policy methods are
+often adequate. For model-free reinforcement learning, one can simply use Sarsa rather
+than Q-learning. Oﬀ-policy methods free behavior from the target policy. This could be
+considered an appealing convenience but not a necessity. However, oﬀ-policy learning is
+essential to other anticipated use cases, cases that we have not yet mentioned in this
+book but may be important to the larger goal of creating a powerful intelligent agent. In these use cases, the agent learns not just a single value function and single policy,
+but large numbers of them in parallel. There is extensive psychological evidence that
+people and animals learn to predict many diﬀerent sensory events, not just rewards. We can be surprised by unusual events, and correct our predictions about them, even if
+they are of neutral valence (neither good nor bad). This kind of prediction presumably
+underlies predictive models of the world such as are used in planning. We predict what
+we will see after eye movements, how long it will take to walk home, the probability of
+making a jump shot in basketball, and the satisfaction we will get from taking on a new
+project. In all these cases, the events we would like to predict depend on our acting
+in a certain way. To learn them all, in parallel, requires learning from the one stream
+of experience. There are many target policies, and thus the one behavior policy cannot
+equal all of them. Yet parallel learning is conceptually possible because the behavior
+policy may overlap in part with many of the target policies. To take full advantage of
+this requires oﬀ-policy learning.
+
+--- Context Source 4 ---
+ur own studies (Barto, Sutton, and Anderson, 1983;
+Sutton, 1984). Michie consistently emphasized the role of trial and error and learning as
+essential aspects of artiﬁcial intelligence (Michie, 1974). Widrow, Gupta, and Maitra (1973) modiﬁed the Least-Mean-Square (LMS) algorithm
+of Widrow and Hoﬀ (1960) to produce a reinforcement learning rule that could learn
+from success and failure signals instead of from training examples. They called this
+form of learning “selective bootstrap adaptation” and described it as “learning with a
+critic” instead of “learning with a teacher.” They analyzed this rule and showed how it
+could learn to play blackjack. This was an isolated foray into reinforcement learning by
+Widrow, whose contributions to supervised learning were much more inﬂuential. Our
+use of the term “critic” is derived from Widrow, Gupta, and Maitra’s paper. Buchanan,
+Mitchell, Smith, and Johnson (1978) independently used the term critic in the context
+of machine learning (see also Dietterich and Buchanan, 1984), but for them a critic is an
+expert system able to do more than evaluate performance. Research on learning automata had a more direct inﬂuence on the trial-and-error
+thread leading to modern reinforcement learning research. These are methods for solv-
+ing a nonassociative, purely selectional learning problem known as the k-armed bandit by
+analogy to a slot machine, or “one-armed bandit,” except with k levers (see Chapter 2). Learning automata are simple, low-memory machines for improving the probability of
+reward in these problems. Learning automata originated with work in the 1960s of the
+Russian mathematician and physicist M. L. Tsetlin and colleagues (published posthu-
+mously in Tsetlin, 1973) and has been extensively developed since then within engineer-
+ing (see Narendra and Thathachar, 1974, 1989). These developments included the study
+of stochastic learning automata, which are methods for updating action probabilities
+on the basis of reward signals.
+
+--- Context Source 5 ---
+ing a distinct
+early contribution to temporal-diﬀerence learning. The temporal-diﬀerence and optimal control threads were fully brought together in
+1989 with Chris Watkins’s development of Q-learning. This work extended and inte-
+grated prior work in all three threads of reinforcement learning research. Paul Werbos
+(1987) contributed to this integration by arguing for the convergence of trial-and-error
+learning and dynamic programming since 1977. By the time of Watkins’s work there
+had been tremendous growth in reinforcement learning research, primarily in the ma-
+chine learning subﬁeld of artiﬁcial intelligence, but also in neural networks and artiﬁcial
+intelligence more broadly. In 1992, the remarkable success of Gerry Tesauro’s backgam-
+mon playing program, TD-Gammon, brought additional attention to the ﬁeld. In the time since publication of the ﬁrst edition of this book, a ﬂourishing subﬁeld of
+neuroscience developed that focuses on the relationship between reinforcement learning
+algorithms and reinforcement learning in the nervous system. Most responsible for this
+
+22
+Chapter 1: Introduction
+is an uncanny similarity between the behavior of temporal-diﬀerence algorithms and
+the activity of dopamine producing neurons in the brain, as pointed out by a number of
+researchers (Friston et al., 1994; Barto, 1995a; Houk, Adams, and Barto, 1995; Montague,
+Dayan, and Sejnowski, 1996; and Schultz, Dayan, and Montague, 1997). Chapter 15
+provides an introduction to this exciting aspect of reinforcement learning. Other important contributions made in the recent history of reinforcement learning
+are too numerous to mention in this brief account; we cite many of these at the end of
+the individual chapters in which they arise. Bibliographical Remarks
+For additional general coverage of reinforcement learning, we refer the reader to the
+books by Szepesv´ari (2010), Bertsekas and Tsitsiklis (1996), Kaelbling (1993a), and
+Sugiyama, Hachiya, and Morimura (2013).
+
+
+**User Question:**
+
+"What is Q-Learning?"
+
+---
+
+**Answer:**

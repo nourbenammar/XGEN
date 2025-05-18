@@ -1,0 +1,139 @@
+**Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+**Context Chunks:**
+
+--- Context Source 1 ---
+body of this book develops
+the ideas of reinforcement learning that pertain to engineering and artiﬁcial intelligence,
+with connections to psychology and neuroscience summarized in Chapters 14 and 15. Finally, reinforcement learning is also part of a larger trend in artiﬁcial intelligence
+back toward simple general principles. Since the late 1960’s, many artiﬁcial intelligence
+researchers presumed that there are no general principles to be discovered, that intelli-
+gence is instead due to the possession of a vast number of special purpose tricks, proce-
+dures, and heuristics. It was sometimes said that if we could just get enough relevant
+facts into a machine, say one million, or one billion, then it would become intelligent. Methods based on general principles, such as search or learning, were characterized as
+“weak methods,” whereas those based on speciﬁc knowledge were called “strong meth-
+ods.” This view is still common today, but not dominant. From our point of view, it was
+simply premature: too little eﬀort had been put into the search for general principles to
+conclude that there were none. Modern artiﬁcial intelligence now includes much research
+looking for general principles of learning, search, and decision making, as well as trying
+to incorporate vast amounts of domain knowledge. It is not clear how far back the pen-
+dulum will swing, but reinforcement learning research is certainly part of the swing back
+toward simpler and fewer general principles of artiﬁcial intelligence. 1.2
+Examples
+A good way to understand reinforcement learning is to consider some of the examples
+and possible applications that have guided its development. • A master chess player makes a move. The choice is informed both by planning—
+anticipating possible replies and counterreplies—and by immediate, intuitive judg-
+ments of the desirability of particular positions and moves. • An adaptive controller adjusts parameters of a petroleum reﬁnery’s operation in
+
+1.2. Examples
+5
+real time.
+
+--- Context Source 2 ---
+aspects of behavior studied by ethologists and behav-
+ioral ecologists: how animals relate to one another and to their physical surroundings,
+and how their behavior contributes to evolutionary ﬁtness. Optimization, MDPs, and
+dynamic programming ﬁgure prominently in these ﬁelds, and our emphasis on agent in-
+teraction with dynamic environments connects to the study of agent behavior in complex
+“ecologies.” Multi-agent reinforcement learning, omitted in this book, has connections
+to social aspects of behavior. Despite the lack of treatment here, reinforcement learn-
+ing should by no means be interpreted as dismissing evolutionary perspectives. Nothing
+about reinforcement learning implies a tabula rasa view of learning and behavior. Indeed,
+experience with engineering applications has highlighted the importance of building into
+reinforcement learning systems knowledge that is analogous to what evolution provides
+to animals. Bibliographical and Historical Remarks
+Ludvig, Bellemare, and Pearson (2011) and Shah (2012) review reinforcement learning in
+the contexts of psychology and neuroscience. These publications are useful companions
+to this chapter and the following chapter on reinforcement learning and neuroscience. 14.1
+Dayan, Niv, Seymour, and Daw (2006) focused on interactions between clas-
+sical and instrumental conditioning, particularly situations where classically-
+conditioned and instrumental responses are in conﬂict. They proposed a Q-
+learning framework for modeling aspects of this interaction. Modayil and Sut-
+ton (2014) used a mobile robot to demonstrate the eﬀectiveness of a control
+method combining a ﬁxed response with online prediction learning. Calling
+this Pavlovian control, they emphasized that it diﬀers from the usual control
+methods of reinforcement learning, being based on predictively executing ﬁxed
+responses and not on reward maximization.
+
+--- Context Source 3 ---
+inforcement learning, but
+by itself does not address the reinforcement learning problem of maximizing a reward
+signal. We therefore consider reinforcement learning to be a third machine learning
+
+1.1. Reinforcement Learning
+3
+paradigm, alongside supervised learning and unsupervised learning and perhaps other
+paradigms as well. One of the challenges that arise in reinforcement learning, and not in other kinds
+of learning, is the trade-oﬀ between exploration and exploitation. To obtain a lot of
+reward, a reinforcement learning agent must prefer actions that it has tried in the past
+and found to be eﬀective in producing reward. But to discover such actions, it has to
+try actions that it has not selected before. The agent has to exploit what it has already
+experienced in order to obtain reward, but it also has to explore in order to make better
+action selections in the future. The dilemma is that neither exploration nor exploitation
+can be pursued exclusively without failing at the task. The agent must try a variety
+of actions and progressively favor those that appear to be best. On a stochastic task,
+each action must be tried many times to gain a reliable estimate of its expected reward. The exploration–exploitation dilemma has been intensively studied by mathematicians
+for many decades, yet remains unresolved. For now, we simply note that the entire
+issue of balancing exploration and exploitation does not even arise in supervised and
+unsupervised learning, at least in their purest forms. Another key feature of reinforcement learning is that it explicitly considers the whole
+problem of a goal-directed agent interacting with an uncertain environment. This is in
+contrast to many approaches that consider subproblems without addressing how they
+might ﬁt into a larger picture. For example, we have mentioned that much of machine
+learning research is concerned with supervised learning without explicitly specifying how
+such an ability would ﬁnally be useful.
+
+--- Context Source 4 ---
+ long and rich,
+that were pursued independently before intertwining in modern reinforcement learning. One thread concerns learning by trial and error that started in the psychology of animal
+learning. This thread runs through some of the earliest work in artiﬁcial intelligence
+and led to the revival of reinforcement learning in the early 1980s. The other thread
+
+14
+Chapter 1: Introduction
+concerns the problem of optimal control and its solution using value functions and dy-
+namic programming. For the most part, this thread did not involve learning. Although
+the two threads have been largely independent, the exceptions revolve around a third,
+less distinct thread concerning temporal-diﬀerence methods such as the one used in the
+tic-tac-toe example in this chapter. All three threads came together in the late 1980s to
+produce the modern ﬁeld of reinforcement learning as we present it in this book. The thread focusing on trial-and-error learning is the one with which we are most
+familiar and about which we have the most to say in this brief history. Before doing
+that, however, we brieﬂy discuss the optimal control thread. The term “optimal control” came into use in the late 1950s to describe the problem of
+designing a controller to minimize a measure of a dynamical system’s behavior over time. One of the approaches to this problem was developed in the mid-1950s by Richard Bell-
+man and others through extending a nineteenth century theory of Hamilton and Jacobi. This approach uses the concepts of a dynamical system’s state and of a value function,
+or “optimal return function,” to deﬁne a functional equation, now often called the Bell-
+man equation. The class of methods for solving optimal control problems by solving
+this equation came to be known as dynamic programming (Bellman, 1957a).
+
+--- Context Source 5 ---
+ by
+stimulus traces, Hull (1943) proposed that longer gradients result from conditioned re-
+inforcement passing backwards from the goal, a process acting in conjunction with his
+molar stimulus traces. Animal experiments showed that if conditions favor the devel-
+opment of conditioned reinforcement during a delay period, learning does not decrease
+with increased delay as much as it does under conditions that obstruct secondary rein-
+forcement. Conditioned reinforcement is favored if there are stimuli that regularly occur
+during the delay interval. Then it is as if reward is not actually delayed because there
+is more immediate conditioned reinforcement. Hull therefore envisioned that there is a
+primary gradient based on the delay of the primary reinforcement mediated by stimulus
+traces, and that this is progressively modiﬁed, and lengthened, by conditioned reinforce-
+ment. Algorithms presented in this book that use both eligibility traces and value functions
+to enable learning with delayed reinforcement correspond to Hull’s hypothesis about
+how animals are able to learn under these conditions. The actor–critic architecture
+discussed in Sections 13.5, 15.7, and 15.8 illustrates this correspondence most clearly. The critic uses a TD algorithm to learn a value function associated with the system’s
+current behavior, that is, to predict the current policy’s return. The actor updates the
+current policy based on the critic’s predictions, or more exactly, on changes in the critic’s
+predictions. The TD error produced by the critic acts as a conditioned reinforcement
+signal for the actor, providing an immediate evaluation of performance even when the
+primary reward signal itself is considerably delayed. Algorithms that estimate action-
+value functions, such as Q-learning and Sarsa, similarly use TD learning principles to
+enable learning with delayed reinforcement by means of conditioned reinforcement.
+
+
+**User Question:**
+
+"What is the basic idea of reinforcement learning?"
+
+---
+
+**Answer:**

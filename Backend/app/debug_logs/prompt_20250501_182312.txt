@@ -1,0 +1,134 @@
+**Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+**Context Chunks:**
+
+--- Context Source 1 ---
+2
+Chapter 1: Introduction
+reward but also the next situation and, through that, all subsequent rewards. These two
+characteristics—trial-and-error search and delayed reward—are the two most important
+distinguishing features of reinforcement learning. Reinforcement learning, like many topics whose names end with “ing,” such as machine
+learning and mountaineering, is simultaneously a problem, a class of solution methods
+that work well on the problem, and the ﬁeld that studies this problem and its solution
+methods. It is convenient to use a single name for all three things, but at the same time
+essential to keep the three conceptually separate. In particular, the distinction between
+problems and solution methods is very important in reinforcement learning; failing to
+make this distinction is the source of many confusions. We formalize the problem of reinforcement learning using ideas from dynamical sys-
+tems theory, speciﬁcally, as the optimal control of incompletely-known Markov decision
+processes. The details of this formalization must wait until Chapter 3, but the basic idea
+is simply to capture the most important aspects of the real problem facing a learning
+agent interacting over time with its environment to achieve a goal. A learning agent
+must be able to sense the state of its environment to some extent and must be able to
+take actions that aﬀect the state. The agent also must have a goal or goals relating to
+the state of the environment. Markov decision processes are intended to include just
+these three aspects—sensation, action, and goal—in their simplest possible forms with-
+out trivializing any of them. Any method that is well suited to solving such problems
+we consider to be a reinforcement learning method. Reinforcement learning is diﬀerent from supervised learning, the kind of learning stud-
+ied in most current research in the ﬁeld of machine learning.
+
+--- Context Source 2 ---
+ agent can also be a component of a larger behaving system. In this case,
+the agent directly interacts with the rest of the larger system and indirectly interacts
+with the larger system’s environment. A simple example is an agent that monitors the
+charge level of robot’s battery and sends commands to the robot’s control architecture. 4
+Chapter 1: Introduction
+This agent’s environment is the rest of the robot together with the robot’s environment. One must look beyond the most obvious examples of agents and their environments to
+appreciate the generality of the reinforcement learning framework. One of the most exciting aspects of modern reinforcement learning is its substantive
+and fruitful interactions with other engineering and scientiﬁc disciplines. Reinforcement
+learning is part of a decades-long trend within artiﬁcial intelligence and machine learn-
+ing toward greater integration with statistics, optimization, and other mathematical
+subjects. For example, the ability of some reinforcement learning methods to learn with
+parameterized approximators addresses the classical “curse of dimensionality” in oper-
+ations research and control theory. More distinctively, reinforcement learning has also
+interacted strongly with psychology and neuroscience, with substantial beneﬁts going
+both ways. Of all the forms of machine learning, reinforcement learning is the clos-
+est to the kind of learning that humans and other animals do, and many of the core
+algorithms of reinforcement learning were originally inspired by biological learning sys-
+tems. Reinforcement learning has also given back, both through a psychological model
+of animal learning that better matches some of the empirical data, and through an in-
+ﬂuential model of parts of the brain’s reward system. The body of this book develops
+the ideas of reinforcement learning that pertain to engineering and artiﬁcial intelligence,
+with connections to psychology and neuroscience summarized in Chapters 14 and 15.
+
+--- Context Source 3 ---
+rning agents. There is also a connection to the idea of an animal’s motivational state,
+which inﬂuences what an animal will approach or avoid and what events are rewarding
+or punishing for the animal. The reinforcement learning algorithms presented in this book include two basic mech-
+anisms for addressing the problem of delayed reinforcement: eligibility traces and value
+functions learned via TD algorithms. Both mechanisms have antecedents in theories of
+animal learning. Eligibility traces are similar to stimulus traces of early theories, and
+value functions correspond to the role of secondary reinforcement in providing nearly
+immediate evaluative feedback. The next correspondence the chapter addressed is that between reinforcement learn-
+ing’s environment models and what psychologists call cognitive maps. Experiments con-
+ducted in the mid 20th century purported to demonstrate the ability of animals to learn
+cognitive maps as alternatives to, or as additions to, state–action associations, and later
+use them to guide behavior, especially when the environment changes unexpectedly. En-
+vironment models in reinforcement learning are like cognitive maps in that they can be
+learned by supervised learning methods without relying on reward signals, and then they
+can be used later to plan behavior. Reinforcement learning’s distinction between model-free and model-based algorithms
+corresponds to the distinction in psychology between habitual and goal-directed behavior. Model-free algorithms make decisions by accessing information that has been strored in
+a policy or an action-value function, whereas model-based methods select actions as the
+result of planning ahead using a model of the agent’s environment. Outcome-devaluation
+experiments provide information about whether an animal’s behavior is habitual or under
+goal-directed control. Reinforcement learning theory has helped clarify thinking about
+these issues.
+
+--- Context Source 4 ---
+with further research. The new ﬁeld of computational psychiatry similarly focuses on the use of computational
+models, some derived from reinforcement learning, to better understand mental disor-
+ders. This chapter only touched the surface of how the neuroscience of reinforcement learn-
+ing and the development of reinforcement learning in computer science and engineering
+have inﬂuenced one another. Most features of reinforcement learning algorithms owe
+their design to purely computational considerations, but some have been inﬂuenced by
+hypotheses about neural learning mechanisms. Remarkably, as experimental data has
+accumulated about the brain’s reward processes, many of the purely computationally-
+motivated features of reinforcement learning algorithms are turning out to be consistent
+with neuroscience data. Other features of computational reinforcement learning, such
+eligibility traces and the ability of teams of reinforcement learning agents to learn to act
+collectively under the inﬂuence of a globally-broadcast reinforcement signal, may also
+turn out to parallel experimental data as neuroscientists continue to unravel the neural
+basis of reward-based animal learning and behavior. 15.13. Summary
+417
+Bibliographical and Historical Remarks
+The number of publications treating parallels between the neuroscience of learning and
+decision making and the approach to reinforcement learning presented in this book is
+enormous. We can cite only a small selection. Niv (2009), Dayan and Niv (2008),
+Gimcher (2011), Ludvig, Bellemare, and Pearson (2011), and Shah (2012) are good
+places to start. Together with economics, evolutionary biology, and mathematical psychology, rein-
+forcement learning theory is helping to formulate quantitative models of the neural mech-
+anisms of choice in humans and non-human primates. With its focus on learning, this
+chapter only lightly touches upon the neuroscience of decision making.
+
+--- Context Source 5 ---
+346
+Chapter 14: Psychology
+of a role in psychology than they once did. But this experimentation led to the discovery
+of learning principles that are elemental and widespread throughout the animal king-
+dom, principles that should not be neglected in designing artiﬁcial learning systems. In
+addition, as we shall see, some aspects of cognitive processing connect naturally to the
+computational perspective provided by reinforcement learning. This chapter’s ﬁnal section includes references relevant to the connections we discuss
+as well as to connections we neglect. We hope this chapter encourages readers to probe all
+of these connections more deeply. Also included in this ﬁnal section is a discussion of how
+the terminology used in reinforcement learning relates to that of psychology. Many of
+the terms and phrases used in reinforcement learning are borrowed from animal learning
+theories, but the computational/engineering meanings of these terms and phrases do not
+always coincide with their meanings in psychology. 14.1
+Prediction and Control
+The algorithms we describe in this book fall into two broad categories: algorithms for pre-
+diction and algorithms for control. These categories arise naturally in solution methods
+for the reinforcement learning problem presented in Chapter 3. In many ways these cat-
+egories respectively correspond to categories of learning extensively studied by psychol-
+ogists: classical, or Pavlovian, conditioning and instrumental, or operant, conditioning. These correspondences are not completely accidental because of psychology’s inﬂuence
+on reinforcement learning, but they are nevertheless striking because they connect ideas
+arising from diﬀerent objectives. The prediction algorithms presented in this book estimate quantities that depend
+on how features of an agent’s environment are expected to unfold over the future.
+
+
+**User Question:**
+
+"What is the basic idea of reinforcement learning?"
+
+---
+
+**Answer:**

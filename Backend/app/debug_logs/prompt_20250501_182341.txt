@@ -1,0 +1,136 @@
+**Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+**Context Chunks:**
+
+--- Context Source 1 ---
+4.4
+Delayed Reinforcement
+The Law of Eﬀect requires a backward eﬀect on connections, and some early critics of
+the law could not conceive of how the present could aﬀect something that was in the
+past. This concern was ampliﬁed by the fact that learning can even occur when there
+is a considerable delay between an action and the consequent reward or penalty. Simi-
+larly, in classical conditioning, learning can occur when US onset follows CS oﬀset by a
+non-negligible time interval. We call this the problem of delayed reinforcement, which
+is related to what Minsky (1961) called the “credit-assignment problem for learning sys-
+tems”: how do you distribute credit for success among the many decisions that may have
+been involved in producing it? The reinforcement learning algorithms presented in this
+book include two basic mechanisms for addressing this problem. The ﬁrst is the use of
+eligibility traces, and the second is the use of TD methods to learn value functions that
+provide nearly immediate evaluations of actions (in tasks like instrumental conditioning
+experiments) or that provide immediate prediction targets (in tasks like classical condi-
+tioning experiments). Both of these methods correspond to similar mechanisms proposed
+in theories of animal learning. Pavlov (1927) pointed out that every stimulus must leave a trace in the nervous system
+that persists for some time after the stimulus ends, and he proposed that stimulus traces
+make learning possible when there is a temporal gap between the CS oﬀset and the
+US onset. To this day, conditioning under these conditions is called trace conditioning
+(page 348). Assuming a trace of the CS remains when the US arrives, learning occurs
+through the simultaneous presence of the trace and the US. We discuss some proposals
+for trace mechanisms in the nervous system in Chapter 15.
+
+--- Context Source 2 ---
+ing a distinct
+early contribution to temporal-diﬀerence learning. The temporal-diﬀerence and optimal control threads were fully brought together in
+1989 with Chris Watkins’s development of Q-learning. This work extended and inte-
+grated prior work in all three threads of reinforcement learning research. Paul Werbos
+(1987) contributed to this integration by arguing for the convergence of trial-and-error
+learning and dynamic programming since 1977. By the time of Watkins’s work there
+had been tremendous growth in reinforcement learning research, primarily in the ma-
+chine learning subﬁeld of artiﬁcial intelligence, but also in neural networks and artiﬁcial
+intelligence more broadly. In 1992, the remarkable success of Gerry Tesauro’s backgam-
+mon playing program, TD-Gammon, brought additional attention to the ﬁeld. In the time since publication of the ﬁrst edition of this book, a ﬂourishing subﬁeld of
+neuroscience developed that focuses on the relationship between reinforcement learning
+algorithms and reinforcement learning in the nervous system. Most responsible for this
+
+22
+Chapter 1: Introduction
+is an uncanny similarity between the behavior of temporal-diﬀerence algorithms and
+the activity of dopamine producing neurons in the brain, as pointed out by a number of
+researchers (Friston et al., 1994; Barto, 1995a; Houk, Adams, and Barto, 1995; Montague,
+Dayan, and Sejnowski, 1996; and Schultz, Dayan, and Montague, 1997). Chapter 15
+provides an introduction to this exciting aspect of reinforcement learning. Other important contributions made in the recent history of reinforcement learning
+are too numerous to mention in this brief account; we cite many of these at the end of
+the individual chapters in which they arise. Bibliographical Remarks
+For additional general coverage of reinforcement learning, we refer the reader to the
+books by Szepesv´ari (2010), Bertsekas and Tsitsiklis (1996), Kaelbling (1993a), and
+Sugiyama, Hachiya, and Morimura (2013).
+
+--- Context Source 3 ---
+aller and less distinct than the other two, but it has played a particularly
+important role in the ﬁeld, in part because temporal-diﬀerence methods seem to be new
+and unique to reinforcement learning. The origins of temporal-diﬀerence learning are in part in animal learning psychology,
+in particular, in the notion of secondary reinforcers. A secondary reinforcer is a stimulus
+that has been paired with a primary reinforcer such as food or pain and, as a result, has
+come to take on similar reinforcing properties. Minsky (1954) may have been the ﬁrst to
+realize that this psychological principle could be important for artiﬁcial learning systems. Arthur Samuel (1959) was the ﬁrst to propose and implement a learning method that
+included temporal-diﬀerence ideas, as part of his celebrated checkers-playing program. Samuel made no reference to Minsky’s work or to possible connections to animal
+learning. His inspiration apparently came from Claude Shannon’s (1950) suggestion that
+a computer could be programmed to use an evaluation function to play chess, and that it
+might be able to improve its play by modifying this function on-line. (It is possible that
+these ideas of Shannon’s also inﬂuenced Bellman, but we know of no evidence for this.) Minsky (1961) extensively discussed Samuel’s work in his “Steps” paper, suggesting the
+connection to secondary reinforcement theories, both natural and artiﬁcial. As we have discussed, in the decade following the work of Minsky and Samuel, little
+computational work was done on trial-and-error learning, and apparently no computa-
+tional work at all was done on temporal-diﬀerence learning. In 1972, Klopf brought
+trial-and-error learning together with an important component of temporal-diﬀerence
+learning. Klopf was interested in principles that would scale to learning in large systems,
+and thus was intrigued by notions of local reinforcement, whereby subcomponents of an
+overall learning system could reinforce one another.
+
+--- Context Source 4 ---
+he key diﬀerence between in-
+strumental and classical conditioning experiments is that in the former the reinforcing
+stimulus is contingent upon the animal’s behavior, whereas in the latter it is not. Learn-
+ing to predict via a TD algorithm corresponds to classical conditioning, and we described
+the TD model of classical conditioning as one instance in which reinforcement learning
+principles account for some details of animal learning behavior. This model general-
+izes the inﬂuential Rescorla–Wagner model by including the temporal dimension where
+events within individual trials inﬂuence learning, and it provides an account of second-
+order conditioning, where predictors of reinforcing stimuli become reinforcing themselves. It also is the basis of an inﬂuential view of the activity of dopamine neurons in the brain,
+something we take up in Chapter 15. Learning by trial and error is at the base of the control aspect of reinforcement learning. We presented some details about Thorndike’s experiments with cats and other animals
+
+374
+Chapter 14: Psychology
+that led to his Law of Eﬀect, which we discussed here and in Chapter 1. We pointed
+out that in reinforcement learning, exploration does not have to be limited to “blind
+groping”; trials can be generated by sophisticated methods using innate and previously
+learned knowledge as long as there is some exploration. We discussed the training method
+B. F. Skinner called shaping in which reward contingencies are progressively altered to
+train an animal to successively approximate a desired behavior. Shaping is not only
+indispensable for animal training, it is also an eﬀective tool for training reinforcement
+learning agents. There is also a connection to the idea of an animal’s motivational state,
+which inﬂuences what an animal will approach or avoid and what events are rewarding
+or punishing for the animal.
+
+--- Context Source 5 ---
+apses occur only if a neuromodulatory pulse arrives within a time window
+that can last up to 10 seconds after a presynaptic spike is closely followed by a postsy-
+naptic spike (Yagishita et al. 2014). Although the evidence is indirect, these experiments
+point to the existence of contingent eligibility traces having prolonged time courses. The
+molecular mechanisms producing these traces, as well as the much shorter traces that
+likely underly STDP, are not yet understood, but research focusing on time-dependent
+and neuromodulator-dependent synaptic plasticity is continuing. The neuron-like actor unit that we have described here, with its Law-of-Eﬀect-style
+learning rule, appeared in somewhat simpler form in the actor–critic network of Barto et
+al. (1983). That network was inspired by the “hedonistic neuron” hypothesis proposed
+by physiologist A. H. Klopf (1972, 1982). Not all the details of Klopf’s hypothesis are
+consistent with what has been learned about synaptic plasticity, but the discovery of
+STDP and the growing evidence for a reward-modulated form of STDP suggest that
+Klopf’s ideas may not have been far oﬀ the mark. We discuss Klopf’s hedonistic neuron
+hypothesis next. 15.9
+Hedonistic Neurons
+In his hedonistic neuron hypothesis, Klopf (1972, 1982) conjectured that individual neu-
+rons seek to maximize the diﬀerence between synaptic input treated as rewarding and
+synaptic input treated as punishing by adjusting the eﬃcacies of their synapses on the
+basis of rewarding or punishing consequences of their own action potentials. In other
+words, individual neurons can be trained with response-contingent reinforcement like an
+animal can be trained in an instrumental conditioning task. His hypothesis included
+the idea that rewards and punishments are conveyed to a neuron via the same synaptic
+input that excites or inhibits the neuron’s spike-generating activity.
+
+
+**User Question:**
+
+"What is Temporal-Diﬀerence Learning?"
+
+---
+
+**Answer:**

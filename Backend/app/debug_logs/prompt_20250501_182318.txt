@@ -1,0 +1,120 @@
+**Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+**Context Chunks:**
+
+--- Context Source 1 ---
+2
+Chapter 1: Introduction
+reward but also the next situation and, through that, all subsequent rewards. These two
+characteristics—trial-and-error search and delayed reward—are the two most important
+distinguishing features of reinforcement learning. Reinforcement learning, like many topics whose names end with “ing,” such as machine
+learning and mountaineering, is simultaneously a problem, a class of solution methods
+that work well on the problem, and the ﬁeld that studies this problem and its solution
+methods. It is convenient to use a single name for all three things, but at the same time
+essential to keep the three conceptually separate. In particular, the distinction between
+problems and solution methods is very important in reinforcement learning; failing to
+make this distinction is the source of many confusions. We formalize the problem of reinforcement learning using ideas from dynamical sys-
+tems theory, speciﬁcally, as the optimal control of incompletely-known Markov decision
+processes. The details of this formalization must wait until Chapter 3, but the basic idea
+is simply to capture the most important aspects of the real problem facing a learning
+agent interacting over time with its environment to achieve a goal. A learning agent
+must be able to sense the state of its environment to some extent and must be able to
+take actions that aﬀect the state. The agent also must have a goal or goals relating to
+the state of the environment. Markov decision processes are intended to include just
+these three aspects—sensation, action, and goal—in their simplest possible forms with-
+out trivializing any of them. Any method that is well suited to solving such problems
+we consider to be a reinforcement learning method. Reinforcement learning is diﬀerent from supervised learning, the kind of learning stud-
+ied in most current research in the ﬁeld of machine learning.
+
+--- Context Source 2 ---
+cation therapy. Of course, both of these directions of control are at play when an agent interacts with
+its environment, but our focus is on the agent as controller; not the environment as
+controller. A view equivalent to ours, and perhaps more illuminating, is that the agent
+is actually controlling the input it receives from its environment (Powers, 1973). This is
+not what psychologists mean by stimulus control. Sometimes reinforcement learning is understood to refer solely to learning policies
+directly from rewards (and penalties) without the involvement of value functions or en-
+vironment models. This is what psychologists call stimulus-response, or S-R, learning. But for us, along with most of today’s psychologists, reinforcement learning is much
+broader than this, including in addition to S-R learning, methods involving value func-
+tions, environment models, planning, and other processes that are commonly thought to
+belong to the more cognitive side of mental functioning.
+
+--- Context Source 3 ---
+ agent can also be a component of a larger behaving system. In this case,
+the agent directly interacts with the rest of the larger system and indirectly interacts
+with the larger system’s environment. A simple example is an agent that monitors the
+charge level of robot’s battery and sends commands to the robot’s control architecture. 4
+Chapter 1: Introduction
+This agent’s environment is the rest of the robot together with the robot’s environment. One must look beyond the most obvious examples of agents and their environments to
+appreciate the generality of the reinforcement learning framework. One of the most exciting aspects of modern reinforcement learning is its substantive
+and fruitful interactions with other engineering and scientiﬁc disciplines. Reinforcement
+learning is part of a decades-long trend within artiﬁcial intelligence and machine learn-
+ing toward greater integration with statistics, optimization, and other mathematical
+subjects. For example, the ability of some reinforcement learning methods to learn with
+parameterized approximators addresses the classical “curse of dimensionality” in oper-
+ations research and control theory. More distinctively, reinforcement learning has also
+interacted strongly with psychology and neuroscience, with substantial beneﬁts going
+both ways. Of all the forms of machine learning, reinforcement learning is the clos-
+est to the kind of learning that humans and other animals do, and many of the core
+algorithms of reinforcement learning were originally inspired by biological learning sys-
+tems. Reinforcement learning has also given back, both through a psychological model
+of animal learning that better matches some of the empirical data, and through an in-
+ﬂuential model of parts of the brain’s reward system. The body of this book develops
+the ideas of reinforcement learning that pertain to engineering and artiﬁcial intelligence,
+with connections to psychology and neuroscience summarized in Chapters 14 and 15.
+
+--- Context Source 4 ---
+sequences. Second, reinforcement learning algorithms are associative, meaning that
+the alternatives found by selection are associated with particular situations, or states,
+to form the agent’s policy. Like learning described by the Law of Eﬀect, reinforcement
+learning is not just the process of ﬁnding actions that produce a lot of reward, but also
+of connecting these actions to situations or states. Thorndike used the phrase learning
+by “selecting and connecting” (Hilgard, 1956). Natural selection in evolution is a prime
+example of a selectional process, but it is not associative (at least as it is commonly
+understood); supervised learning is associative, but it is not selectional because it relies
+on instructions that directly tell the agent how to change its behavior. In computational terms, the Law of Eﬀect describes an elementary way of combining
+search and memory: search in the form of trying and selecting among many actions
+in each situation, and memory in the form of associations linking situations with the
+actions found—so far—to work best in those situations. Search and memory are essential
+components of all reinforcement learning algorithms, whether memory takes the form of
+an agent’s policy, value function, or environment model. A reinforcement learning algorithm’s need to search means that it has to explore in
+some way. Animals clearly explore as well, and early animal learning researchers dis-
+agreed about the degree of guidance an animal uses in selecting its actions in situations
+like Thorndike’s puzzle boxes. Are actions the result of “absolutely random, blind grop-
+ing” (Woodworth, 1938, p. 777), or is there some degree of guidance, either from prior
+learning, reasoning, or other means? Although some thinkers, including Thorndike, seem
+to have taken the former position, others favored more deliberate exploration. Reinforce-
+ment learning algorithms allow wide latitude for how much guidance an agent can employ
+in selecting actions.
+
+--- Context Source 5 ---
+s “imitation learning,” “learning from
+demonstration,” and “apprenticeship learning.” The idea here is to beneﬁt from the ex-
+pert agent but leave open the possibility of eventually performing better. Learning from
+an expert’s behavior can be done either by learning directly by supervised learning or
+by extracting a reward signal using what is known as “inverse reinforcement learning”
+and then using a reinforcement learning algorithm with that reward signal to learn a
+policy. The task of inverse reinforcement learning as explored by Ng and Russell (2000)
+is to try to recover the expert’s reward signal from the expert’s behavior alone. This
+cannot be done exactly because a policy can be optimal with respect to many diﬀer-
+ent reward signals (for example, any reward signal that gives the same reward for all
+states and actions), but it is possible to ﬁnd plausible reward signal candidates. Un-
+fortunately, strong assumptions are required, including knowledge of the environment’s
+dynamics and of the feature vectors in which the reward signal is linear. The method
+also requires completely solving the problem (e.g., by dynamic programming methods)
+multiple times. These diﬃculties notwithstanding, Abbeel and Ng (2004) argue that the
+inverse reinforcement learning approach can sometimes be more eﬀective than supervised
+learning for beneﬁting from the behavior of an expert. Another approach to ﬁnding a good reward signal is to automate the trial-and-error
+search for a good signal that we mentioned above. From an application perspective, the
+reward signal is a parameter of the learning algorithm. As is true for other algorithm
+parameters, the search for a good reward signal can be automated by deﬁning a space of
+feasible candidates and applying an optimization algorithm.
+
+
+**User Question:**
+
+"What is reinforcement learning?"
+
+---
+
+**Answer:**

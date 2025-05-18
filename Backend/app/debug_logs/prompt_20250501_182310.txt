@@ -1,0 +1,131 @@
+**Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+**Context Chunks:**
+
+--- Context Source 1 ---
+2
+Chapter 1: Introduction
+reward but also the next situation and, through that, all subsequent rewards. These two
+characteristics—trial-and-error search and delayed reward—are the two most important
+distinguishing features of reinforcement learning. Reinforcement learning, like many topics whose names end with “ing,” such as machine
+learning and mountaineering, is simultaneously a problem, a class of solution methods
+that work well on the problem, and the ﬁeld that studies this problem and its solution
+methods. It is convenient to use a single name for all three things, but at the same time
+essential to keep the three conceptually separate. In particular, the distinction between
+problems and solution methods is very important in reinforcement learning; failing to
+make this distinction is the source of many confusions. We formalize the problem of reinforcement learning using ideas from dynamical sys-
+tems theory, speciﬁcally, as the optimal control of incompletely-known Markov decision
+processes. The details of this formalization must wait until Chapter 3, but the basic idea
+is simply to capture the most important aspects of the real problem facing a learning
+agent interacting over time with its environment to achieve a goal. A learning agent
+must be able to sense the state of its environment to some extent and must be able to
+take actions that aﬀect the state. The agent also must have a goal or goals relating to
+the state of the environment. Markov decision processes are intended to include just
+these three aspects—sensation, action, and goal—in their simplest possible forms with-
+out trivializing any of them. Any method that is well suited to solving such problems
+we consider to be a reinforcement learning method. Reinforcement learning is diﬀerent from supervised learning, the kind of learning stud-
+ied in most current research in the ﬁeld of machine learning.
+
+--- Context Source 2 ---
+ agent can also be a component of a larger behaving system. In this case,
+the agent directly interacts with the rest of the larger system and indirectly interacts
+with the larger system’s environment. A simple example is an agent that monitors the
+charge level of robot’s battery and sends commands to the robot’s control architecture. 4
+Chapter 1: Introduction
+This agent’s environment is the rest of the robot together with the robot’s environment. One must look beyond the most obvious examples of agents and their environments to
+appreciate the generality of the reinforcement learning framework. One of the most exciting aspects of modern reinforcement learning is its substantive
+and fruitful interactions with other engineering and scientiﬁc disciplines. Reinforcement
+learning is part of a decades-long trend within artiﬁcial intelligence and machine learn-
+ing toward greater integration with statistics, optimization, and other mathematical
+subjects. For example, the ability of some reinforcement learning methods to learn with
+parameterized approximators addresses the classical “curse of dimensionality” in oper-
+ations research and control theory. More distinctively, reinforcement learning has also
+interacted strongly with psychology and neuroscience, with substantial beneﬁts going
+both ways. Of all the forms of machine learning, reinforcement learning is the clos-
+est to the kind of learning that humans and other animals do, and many of the core
+algorithms of reinforcement learning were originally inspired by biological learning sys-
+tems. Reinforcement learning has also given back, both through a psychological model
+of animal learning that better matches some of the empirical data, and through an in-
+ﬂuential model of parts of the brain’s reward system. The body of this book develops
+the ideas of reinforcement learning that pertain to engineering and artiﬁcial intelligence,
+with connections to psychology and neuroscience summarized in Chapters 14 and 15.
+
+--- Context Source 3 ---
+ almost the opposite of planning. In Chapter 8 we explore reinforcement learning systems that simultaneously learn by trial
+and error, learn a model of the environment, and use the model for planning. Modern
+reinforcement learning spans the spectrum from low-level, trial-and-error learning to
+high-level, deliberative planning. 1.4
+Limitations and Scope
+Reinforcement learning relies heavily on the concept of state—as input to the policy and
+value function, and as both input to and output from the model. Informally, we can
+think of the state as a signal conveying to the agent some sense of “how the environment
+is” at a particular time. The formal deﬁnition of state as we use it here is given by
+the framework of Markov decision processes presented in Chapter 3. More generally,
+however, we encourage the reader to follow the informal meaning and think of the state
+as whatever information is available to the agent about its environment. In eﬀect, we
+assume that the state signal is produced by some preprocessing system that is nominally
+part of the agent’s environment. We do not address the issues of constructing, changing,
+or learning the state signal in this book (other than brieﬂy in Section 17.3). We take
+this approach not because we consider state representation to be unimportant, but in
+order to focus fully on the decision-making issues. In other words, our main concern is
+not with designing the state signal, but with deciding what action to take as a function
+of whatever state signal is available. Most of the reinforcement learning methods we consider in this book are structured
+around estimating value functions, but it is not strictly necessary to do this to solve rein-
+forcement learning problems. For example, solution methods such as genetic algorithms,
+genetic programming, simulated annealing, and other optimization methods never esti-
+mate value functions.
+
+--- Context Source 4 ---
+kinner, 1938), a discriminative stimulus is a stimulus that signals the presence
+of a particular reinforcement contingency. In our terms, diﬀerent discriminative
+stimuli correspond to diﬀerent states. 2.10
+Bellman (1956) was the ﬁrst to show how dynamic programming could be used
+to compute the optimal balance between exploration and exploitation within
+a Bayesian formulation of the problem. The Gittins index approach is due to
+Gittins and Jones (1974). Duﬀ (1995) showed how it is possible to learn Gittins
+indices for bandit problems through reinforcement learning. The survey by Ku-
+mar (1985) provides a good discussion of Bayesian and non-Bayesian approaches
+to these problems. The term information state comes from the literature on par-
+tially observable MDPs; see, e.g., Lovejoy (1991). Other theoretical research focuses on the eﬃciency of exploration, usually ex-
+pressed as how quickly an algorithm can approach an optimal decision-making
+policy. One way to formalize exploration eﬃciency is by adapting to reinforce-
+ment learning the notion of sample complexity for a supervised learning algo-
+rithm, which is the number of training examples the algorithm needs to attain
+a desired degree of accuracy in learning the target function. A deﬁnition of
+the sample complexity of exploration for a reinforcement learning algorithm is
+the number of time steps in which the algorithm does not select near-optimal
+actions (Kakade, 2003). Li (2012) discusses this and several other approaches
+in a survey of theoretical approaches to exploration eﬃciency in reinforcement
+learning.
+
+--- Context Source 5 ---
+ 1;
+see Chapter 12) but often bootstrapping greatly increases eﬃciency. It is an ability that
+we would very much like to keep in our toolkit. Finally, there is oﬀ-policy learning; can we give that up? On-policy methods are
+often adequate. For model-free reinforcement learning, one can simply use Sarsa rather
+than Q-learning. Oﬀ-policy methods free behavior from the target policy. This could be
+considered an appealing convenience but not a necessity. However, oﬀ-policy learning is
+essential to other anticipated use cases, cases that we have not yet mentioned in this
+book but may be important to the larger goal of creating a powerful intelligent agent. In these use cases, the agent learns not just a single value function and single policy,
+but large numbers of them in parallel. There is extensive psychological evidence that
+people and animals learn to predict many diﬀerent sensory events, not just rewards. We can be surprised by unusual events, and correct our predictions about them, even if
+they are of neutral valence (neither good nor bad). This kind of prediction presumably
+underlies predictive models of the world such as are used in planning. We predict what
+we will see after eye movements, how long it will take to walk home, the probability of
+making a jump shot in basketball, and the satisfaction we will get from taking on a new
+project. In all these cases, the events we would like to predict depend on our acting
+in a certain way. To learn them all, in parallel, requires learning from the one stream
+of experience. There are many target policies, and thus the one behavior policy cannot
+equal all of them. Yet parallel learning is conceptually possible because the behavior
+policy may overlap in part with many of the target policies. To take full advantage of
+this requires oﬀ-policy learning.
+
+
+**User Question:**
+
+"What is reinforcement learning?"
+
+---
+
+**Answer:**

@@ -1,0 +1,147 @@
+**Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+**Context Chunks:**
+
+--- Context Source 1 ---
+92
+Chapter 5: Monte Carlo Methods
+To handle the nonstationarity, we adapt the idea of general policy iteration (GPI)
+developed in Chapter 4 for DP. Whereas there we computed value functions from knowl-
+edge of the MDP, here we learn value functions from sample returns with the MDP. The
+value functions and corresponding policies still interact to attain optimality in essentially
+the same way (GPI). As in the DP chapter, ﬁrst we consider the prediction problem (the
+computation of vπ and qπ for a ﬁxed arbitrary policy π) then policy improvement, and,
+ﬁnally, the control problem and its solution by GPI. Each of these ideas taken from DP
+is extended to the Monte Carlo case in which only sample experience is available. 5.1
+Monte Carlo Prediction
+We begin by considering Monte Carlo methods for learning the state-value function for a
+given policy. Recall that the value of a state is the expected return—expected cumulative
+future discounted reward—starting from that state. An obvious way to estimate it from
+experience, then, is simply to average the returns observed after visits to that state. As
+more returns are observed, the average should converge to the expected value. This idea
+underlies all Monte Carlo methods. In particular, suppose we wish to estimate vπ(s), the value of a state s under policy π,
+given a set of episodes obtained by following π and passing through s. Each occurrence
+of state s in an episode is called a visit to s. Of course, s may be visited multiple times
+in the same episode; let us call the ﬁrst time it is visited in an episode the ﬁrst visit
+to s. The ﬁrst-visit MC method estimates vπ(s) as the average of the returns following
+ﬁrst visits to s, whereas the every-visit MC method averages the returns following all
+visits to s. These two Monte Carlo (MC) methods are very similar but have slightly
+diﬀerent theoretical properties. First-visit MC has been most widely studied, dating
+back to the 1940s, and is the one we focus on in this chapter.
+
+--- Context Source 2 ---
+s
+DP methods use an estimate of (6.4) as a target. The Monte Carlo target is an estimate
+because the expected value in (6.3) is not known; a sample return is used in place of
+the real expected return. The DP target is an estimate not because of the expected
+values, which are assumed to be completely provided by a model of the environment,
+but because vπ(St+1) is not known and the current estimate, V (St+1), is used instead. The TD target is an estimate for both reasons: it samples the expected values in (6.4)
+and it uses the current estimate V instead of the true vπ. Thus, TD methods combine
+
+6.1. TD Prediction
+121
+the sampling of Monte Carlo with the bootstrapping of DP. As we shall see, with care
+and imagination this can take us a long way toward obtaining the advantages of both
+Monte Carlo and DP methods. TD(0)
+Shown to the right is the backup diagram for tabular TD(0). The value
+estimate for the state node at the top of the backup diagram is updated on
+the basis of the one sample transition from it to the immediately following
+state. We refer to TD and Monte Carlo updates as sample updates because
+they involve looking ahead to a sample successor state (or state–action pair),
+using the value of the successor and the reward along the way to compute a
+backed-up value, and then updating the value of the original state (or state–
+action pair) accordingly. Sample updates diﬀer from the expected updates
+of DP methods in that they are based on a single sample successor rather than on a
+complete distribution of all possible successors. Finally, note that the quantity in brackets in the TD(0) update is a sort of error,
+measuring the diﬀerence between the estimated value of St and the better estimate
+Rt+1 +γV (St+1). This quantity, called the TD error, arises in various forms throughout
+reinforcement learning:
+δt .= Rt+1 + γV (St+1) − V (St). (6.5)
+Notice that the TD error at each time is the error in the estimate made at that time.
+
+--- Context Source 3 ---
+e state set (we explore this further in
+Chapter 8). A fourth advantage of Monte Carlo methods, which we discuss later in the book, is
+that they may be less harmed by violations of the Markov property. This is because
+they do not update their value estimates on the basis of the value estimates of successor
+states. In other words, it is because they do not bootstrap. In designing Monte Carlo control methods we have followed the overall schema of
+generalized policy iteration (GPI) introduced in Chapter 4. GPI involves interacting
+processes of policy evaluation and policy improvement. Monte Carlo methods provide
+an alternative policy evaluation process. Rather than use a model to compute the value
+of each state, they simply average many returns that start in the state. Because a state’s
+value is the expected return, this average can become a good approximation to the
+value. In control methods we are particularly interested in approximating action-value
+functions, because these can be used to improve the policy without requiring a model of
+the environment’s transition dynamics. Monte Carlo methods intermix policy evaluation
+and policy improvement steps on an episode-by-episode basis, and can be incrementally
+implemented on an episode-by-episode basis. Maintaining suﬃcient exploration is an issue in Monte Carlo control methods. It is
+not enough just to select the actions currently estimated to be best, because then no
+returns will be obtained for alternative actions, and it may never be learned that they are
+actually better. One approach is to ignore this problem by assuming that episodes begin
+with state–action pairs randomly selected to cover all possibilities. Such exploring starts
+can sometimes be arranged in applications with simulated episodes, but are unlikely
+in learning from real experience. In on-policy methods, the agent commits to always
+exploring and tries to ﬁnd the best policy that still explores.
+
+--- Context Source 4 ---
+problems. The ﬁrst chapter of this part of the book describes solution methods for the special
+case of the reinforcement learning problem in which there is only a single state, called
+bandit problems. The second chapter describes the general problem formulation that we
+treat throughout the rest of the book—ﬁnite Markov decision processes—and its main
+ideas including Bellman equations and value functions. The next three chapters describe three fundamental classes of methods for solving ﬁnite
+Markov decision problems: dynamic programming, Monte Carlo methods, and temporal-
+diﬀerence learning. Each class of methods has its strengths and weaknesses. Dynamic
+programming methods are well developed mathematically, but require a complete and
+accurate model of the environment. Monte Carlo methods don’t require a model and are
+conceptually simple, but are not well suited for step-by-step incremental computation. Finally, temporal-diﬀerence methods require no model and are fully incremental, but are
+more complex to analyze. The methods also diﬀer in several ways with respect to their
+eﬃciency and speed of convergence. The remaining two chapters describe how these three classes of methods can be com-
+bined to obtain the best features of each of them. In one chapter we describe how the
+strengths of Monte Carlo methods can be combined with the strengths of temporal-
+diﬀerence methods via multi-step bootstrapping methods. In the ﬁnal chapter of this
+part of the book we show how temporal-diﬀerence learning methods can be combined
+with model learning and planning methods (such as dynamic programming) for a com-
+plete and uniﬁed solution to the tabular reinforcement learning problem. 23
+
+--- Context Source 5 ---
+ These diﬀerences in the diagrams accurately reﬂect the fundamental
+diﬀerences between the algorithms. An important fact about Monte Carlo methods is that the estimates for each
+state are independent. The estimate for one state does not build upon the estimate
+of any other state, as is the case in DP. In other words, Monte Carlo methods do
+not bootstrap as we deﬁned it in the previous chapter. In particular, note that the computational expense of estimating the value of
+a single state is independent of the number of states. This can make Monte
+Carlo methods particularly attractive when one requires the value of only one
+or a subset of states. One can generate many sample episodes starting from the
+states of interest, averaging returns from only these states, ignoring all others. This is
+a third advantage Monte Carlo methods can have over DP methods (after the ability to
+learn from actual experience and from simulated experience). A bubble on a wire loop. From Hersh and Griego (1969). Reproduced
+with permission. Copyright (1969) Scientiﬁc
+American, a division of Nature America, Inc.
+All rights reserved. Example 5.2: Soap Bubble
+Suppose a wire frame forming a closed loop is
+dunked in soapy water to form a soap surface
+or bubble conforming at its edges to the wire
+frame. If the geometry of the wire frame is ir-
+regular but known, how can you compute the
+shape of the surface? The shape has the prop-
+erty that the total force on each point exerted
+by neighboring points is zero (or else the shape
+would change). This means that the surface’s
+height at any point is the average of its heights
+at points in a small circle around that point. In
+addition, the surface must meet at its bound-
+aries with the wire frame. The usual approach
+to problems of this kind is to put a grid over
+the area covered by the surface and solve for its
+height at the grid points by an iterative com-
+putation.
+
+
+**User Question:**
+
+"How do Monte Carlo methods estimate value functions?"
+
+---
+
+**Answer:**

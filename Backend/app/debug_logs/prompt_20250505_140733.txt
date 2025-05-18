@@ -1,0 +1,135 @@
+**Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+**Context Chunks:**
+
+--- Context Source 1 ---
+pose of estimating
+values is to achieve more reward. Nevertheless, it is values with which we are most
+concerned when making and evaluating decisions. Action choices are made based on
+value judgments. We seek actions that bring about states of highest value, not high-
+est reward, because these actions obtain the greatest amount of reward for us over the
+long run. Unfortunately, it is much harder to determine values than it is to determine
+
+1.4. Limitations and Scope
+7
+rewards. Rewards are basically given directly by the environment, but values must be
+estimated and re-estimated from the sequences of observations an agent makes over its
+entire lifetime. In fact, the most important component of almost all reinforcement learn-
+ing algorithms we consider is a method for eﬃciently estimating values. The central role
+of value estimation is arguably the most important thing that has been learned about
+reinforcement learning over the last six decades. The fourth and ﬁnal element of some reinforcement learning systems is a model of the
+environment. This is something that mimics the behavior of the environment, or more
+generally, that allows inferences to be made about how the environment will behave. For example, given a state and action, the model might predict the resultant next state
+and next reward. Models are used for planning, by which we mean any way of deciding
+on a course of action by considering possible future situations before they are actually
+experienced. Methods for solving reinforcement learning problems that use models and
+planning are called model-based methods, as opposed to simpler model-free methods
+that are explicitly trial-and-error learners—viewed as almost the opposite of planning. In Chapter 8 we explore reinforcement learning systems that simultaneously learn by trial
+and error, learn a model of the environment, and use the model for planning.
+
+--- Context Source 2 ---
+ policies,
+but learning a value function takes advantage of information available during the course
+of play. This simple example illustrates some of the key features of reinforcement learning
+methods. First, there is the emphasis on learning while interacting with an environment,
+in this case with an opponent player. Second, there is a clear goal, and correct behavior
+requires planning or foresight that takes into account delayed eﬀects of one’s choices. For example, the simple reinforcement learning player would learn to set up multi-move
+traps for a shortsighted opponent. It is a striking feature of the reinforcement learning
+solution that it can achieve the eﬀects of planning and lookahead without using a model
+of the opponent and without conducting an explicit search over possible sequences of
+future states and actions. While this example illustrates some of the key features of reinforcement learning, it is
+so simple that it might give the impression that reinforcement learning is more limited
+than it really is. Although tic-tac-toe is a two-person game, reinforcement learning also
+applies in the case in which there is no external adversary, that is, in the case of a
+“game against nature.”
+Reinforcement learning also is not restricted to problems in
+which behavior breaks down into separate episodes, like the separate games of tic-tac-
+toe, with reward only at the end of each episode. It is just as applicable when behavior
+continues indeﬁnitely and when rewards of various magnitudes can be received at any
+time. Reinforcement learning is also applicable to problems that do not even break
+down into discrete time steps, like the plays of tic-tac-toe. The general principles apply
+to continuous-time problems as well, although the theory gets more complicated and we
+omit it from this introductory treatment. Tic-tac-toe has a relatively small, ﬁnite state set, whereas reinforcement learning can
+be used when the state set is very large, or even inﬁnite.
+
+--- Context Source 3 ---
+rning agents. There is also a connection to the idea of an animal’s motivational state,
+which inﬂuences what an animal will approach or avoid and what events are rewarding
+or punishing for the animal. The reinforcement learning algorithms presented in this book include two basic mech-
+anisms for addressing the problem of delayed reinforcement: eligibility traces and value
+functions learned via TD algorithms. Both mechanisms have antecedents in theories of
+animal learning. Eligibility traces are similar to stimulus traces of early theories, and
+value functions correspond to the role of secondary reinforcement in providing nearly
+immediate evaluative feedback. The next correspondence the chapter addressed is that between reinforcement learn-
+ing’s environment models and what psychologists call cognitive maps. Experiments con-
+ducted in the mid 20th century purported to demonstrate the ability of animals to learn
+cognitive maps as alternatives to, or as additions to, state–action associations, and later
+use them to guide behavior, especially when the environment changes unexpectedly. En-
+vironment models in reinforcement learning are like cognitive maps in that they can be
+learned by supervised learning methods without relying on reward signals, and then they
+can be used later to plan behavior. Reinforcement learning’s distinction between model-free and model-based algorithms
+corresponds to the distinction in psychology between habitual and goal-directed behavior. Model-free algorithms make decisions by accessing information that has been strored in
+a policy or an action-value function, whereas model-based methods select actions as the
+result of planning ahead using a model of the agent’s environment. Outcome-devaluation
+experiments provide information about whether an animal’s behavior is habitual or under
+goal-directed control. Reinforcement learning theory has helped clarify thinking about
+these issues.
+
+--- Context Source 4 ---
+ agent has a complete and accurate environment model, the agent is typi-
+cally unable to perform enough computation per time step to fully use it. The memory
+available is also an important constraint. Memory may be required to build up accurate
+approximations of value functions, policies, and models. In most cases of practical inter-
+est there are far more states than could possibly be entries in a table, and approximations
+must be made. A well-deﬁned notion of optimality organizes the approach to learning we describe in
+this book and provides a way to understand the theoretical properties of various learning
+algorithms, but it is an ideal that reinforcement learning agents can only approximate
+to varying degrees. In reinforcement learning we are very much concerned with cases in
+which optimal solutions cannot be found but must be approximated in some way. Bibliographical and Historical Remarks
+The reinforcement learning problem is deeply indebted to the idea of Markov decision
+processes (MDPs) from the ﬁeld of optimal control. These historical inﬂuences and other
+major inﬂuences from psychology are described in the brief history given in Chapter 1. Reinforcement learning adds to MDPs a focus on approximation and incomplete infor-
+mation for realistically large problems. MDPs and the reinforcement learning problem
+are only weakly linked to traditional learning and decision-making problems in artiﬁcial
+intelligence. However, artiﬁcial intelligence is now vigorously exploring MDP formula-
+tions for planning and decision making from a variety of perspectives. MDPs are more
+general than previous formulations used in artiﬁcial intelligence in that they permit more
+general kinds of goals and uncertainty. The theory of MDPs is treated by, e.g., Bertsekas (2005), White (1969), Whittle
+(1982, 1983), and Puterman (1994). A particularly compact treatment of the ﬁnite case
+is given by Ross (1983).
+
+--- Context Source 5 ---
+aspects of behavior studied by ethologists and behav-
+ioral ecologists: how animals relate to one another and to their physical surroundings,
+and how their behavior contributes to evolutionary ﬁtness. Optimization, MDPs, and
+dynamic programming ﬁgure prominently in these ﬁelds, and our emphasis on agent in-
+teraction with dynamic environments connects to the study of agent behavior in complex
+“ecologies.” Multi-agent reinforcement learning, omitted in this book, has connections
+to social aspects of behavior. Despite the lack of treatment here, reinforcement learn-
+ing should by no means be interpreted as dismissing evolutionary perspectives. Nothing
+about reinforcement learning implies a tabula rasa view of learning and behavior. Indeed,
+experience with engineering applications has highlighted the importance of building into
+reinforcement learning systems knowledge that is analogous to what evolution provides
+to animals. Bibliographical and Historical Remarks
+Ludvig, Bellemare, and Pearson (2011) and Shah (2012) review reinforcement learning in
+the contexts of psychology and neuroscience. These publications are useful companions
+to this chapter and the following chapter on reinforcement learning and neuroscience. 14.1
+Dayan, Niv, Seymour, and Daw (2006) focused on interactions between clas-
+sical and instrumental conditioning, particularly situations where classically-
+conditioned and instrumental responses are in conﬂict. They proposed a Q-
+learning framework for modeling aspects of this interaction. Modayil and Sut-
+ton (2014) used a mobile robot to demonstrate the eﬀectiveness of a control
+method combining a ﬁxed response with online prediction learning. Calling
+this Pavlovian control, they emphasized that it diﬀers from the usual control
+methods of reinforcement learning, being based on predictively executing ﬁxed
+responses and not on reward maximization.
+
+
+**User Question:**
+
+"What is reinforcement learning?"
+
+---
+
+**Answer:**

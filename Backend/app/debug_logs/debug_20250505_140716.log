@@ -1,0 +1,42 @@
+2025-05-05 14:07:31,434 - INFO - QUERY: 'What is reinforcement learning?' for document 9
+2025-05-05 14:07:31,435 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-05 14:07:31,438 - INFO - Document has 17 chapters
+2025-05-05 14:07:31,469 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-05 14:07:31,470 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-05 14:07:31,471 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-05 14:07:31,473 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-05 14:07:31,474 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-05 14:07:31,475 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-05 14:07:31,476 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-05 14:07:31,477 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-05 14:07:31,478 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-05 14:07:31,479 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-05 14:07:31,480 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-05 14:07:31,481 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-05 14:07:31,482 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-05 14:07:31,484 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-05 14:07:31,485 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-05 14:07:31,486 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-05 14:07:31,487 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-05 14:07:33,229 - INFO - Likely search terms: what, reinforcement, learning?
+2025-05-05 14:07:33,229 - INFO - Embedding norm: 1.0000
+2025-05-05 14:07:33,230 - INFO - Non-zero elements: 381/384
+2025-05-05 14:07:33,647 - INFO - Retrieved 5 chunks
+2025-05-05 14:07:33,648 - INFO - Saved chunks to app/debug_logs/chunks_20250505_140733.json
+2025-05-05 14:07:33,648 - INFO - Top chunk 1 (ID: 6899, Score: 0.6524):
+2025-05-05 14:07:33,648 - INFO - Text snippet: pose of estimating
+values is to achieve more reward. Nevertheless, it is values with which we are mo...
+2025-05-05 14:07:33,648 - INFO - Top chunk 2 (ID: 6907, Score: 0.6218):
+2025-05-05 14:07:33,648 - INFO - Text snippet:  policies,
+but learning a value function takes advantage of information available during the course
+...
+2025-05-05 14:07:33,648 - INFO - Top chunk 3 (ID: 7459, Score: 0.6204):
+2025-05-05 14:07:33,648 - INFO - Text snippet: rning agents. There is also a connection to the idea of an animal’s motivational state,
+which inﬂuen...
+2025-05-05 14:07:33,693 - INFO - Saved prompt to app/debug_logs/prompt_20250505_140733.txt
+2025-05-05 14:07:33,693 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-05 14:07:36,259 - INFO - Saved LLM response to app/debug_logs/response_20250505_140736.txt
+2025-05-05 14:07:36,259 - INFO - Response preview: Reinforcement learning is a method of learning through interaction with an environment, with a clear goal and planning that accounts for delayed effects of choices.  It emphasizes learning while inter...

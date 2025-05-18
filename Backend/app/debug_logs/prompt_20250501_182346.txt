@@ -1,0 +1,134 @@
+**Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+**Context Chunks:**
+
+--- Context Source 1 ---
+2
+Chapter 1: Introduction
+reward but also the next situation and, through that, all subsequent rewards. These two
+characteristics—trial-and-error search and delayed reward—are the two most important
+distinguishing features of reinforcement learning. Reinforcement learning, like many topics whose names end with “ing,” such as machine
+learning and mountaineering, is simultaneously a problem, a class of solution methods
+that work well on the problem, and the ﬁeld that studies this problem and its solution
+methods. It is convenient to use a single name for all three things, but at the same time
+essential to keep the three conceptually separate. In particular, the distinction between
+problems and solution methods is very important in reinforcement learning; failing to
+make this distinction is the source of many confusions. We formalize the problem of reinforcement learning using ideas from dynamical sys-
+tems theory, speciﬁcally, as the optimal control of incompletely-known Markov decision
+processes. The details of this formalization must wait until Chapter 3, but the basic idea
+is simply to capture the most important aspects of the real problem facing a learning
+agent interacting over time with its environment to achieve a goal. A learning agent
+must be able to sense the state of its environment to some extent and must be able to
+take actions that aﬀect the state. The agent also must have a goal or goals relating to
+the state of the environment. Markov decision processes are intended to include just
+these three aspects—sensation, action, and goal—in their simplest possible forms with-
+out trivializing any of them. Any method that is well suited to solving such problems
+we consider to be a reinforcement learning method. Reinforcement learning is diﬀerent from supervised learning, the kind of learning stud-
+ied in most current research in the ﬁeld of machine learning.
+
+--- Context Source 2 ---
+pose of estimating
+values is to achieve more reward. Nevertheless, it is values with which we are most
+concerned when making and evaluating decisions. Action choices are made based on
+value judgments. We seek actions that bring about states of highest value, not high-
+est reward, because these actions obtain the greatest amount of reward for us over the
+long run. Unfortunately, it is much harder to determine values than it is to determine
+
+1.4. Limitations and Scope
+7
+rewards. Rewards are basically given directly by the environment, but values must be
+estimated and re-estimated from the sequences of observations an agent makes over its
+entire lifetime. In fact, the most important component of almost all reinforcement learn-
+ing algorithms we consider is a method for eﬃciently estimating values. The central role
+of value estimation is arguably the most important thing that has been learned about
+reinforcement learning over the last six decades. The fourth and ﬁnal element of some reinforcement learning systems is a model of the
+environment. This is something that mimics the behavior of the environment, or more
+generally, that allows inferences to be made about how the environment will behave. For example, given a state and action, the model might predict the resultant next state
+and next reward. Models are used for planning, by which we mean any way of deciding
+on a course of action by considering possible future situations before they are actually
+experienced. Methods for solving reinforcement learning problems that use models and
+planning are called model-based methods, as opposed to simpler model-free methods
+that are explicitly trial-and-error learners—viewed as almost the opposite of planning. In Chapter 8 we explore reinforcement learning systems that simultaneously learn by trial
+and error, learn a model of the environment, and use the model for planning.
+
+--- Context Source 3 ---
+ agent can also be a component of a larger behaving system. In this case,
+the agent directly interacts with the rest of the larger system and indirectly interacts
+with the larger system’s environment. A simple example is an agent that monitors the
+charge level of robot’s battery and sends commands to the robot’s control architecture. 4
+Chapter 1: Introduction
+This agent’s environment is the rest of the robot together with the robot’s environment. One must look beyond the most obvious examples of agents and their environments to
+appreciate the generality of the reinforcement learning framework. One of the most exciting aspects of modern reinforcement learning is its substantive
+and fruitful interactions with other engineering and scientiﬁc disciplines. Reinforcement
+learning is part of a decades-long trend within artiﬁcial intelligence and machine learn-
+ing toward greater integration with statistics, optimization, and other mathematical
+subjects. For example, the ability of some reinforcement learning methods to learn with
+parameterized approximators addresses the classical “curse of dimensionality” in oper-
+ations research and control theory. More distinctively, reinforcement learning has also
+interacted strongly with psychology and neuroscience, with substantial beneﬁts going
+both ways. Of all the forms of machine learning, reinforcement learning is the clos-
+est to the kind of learning that humans and other animals do, and many of the core
+algorithms of reinforcement learning were originally inspired by biological learning sys-
+tems. Reinforcement learning has also given back, both through a psychological model
+of animal learning that better matches some of the empirical data, and through an in-
+ﬂuential model of parts of the brain’s reward system. The body of this book develops
+the ideas of reinforcement learning that pertain to engineering and artiﬁcial intelligence,
+with connections to psychology and neuroscience summarized in Chapters 14 and 15.
+
+--- Context Source 4 ---
+ policies,
+but learning a value function takes advantage of information available during the course
+of play. This simple example illustrates some of the key features of reinforcement learning
+methods. First, there is the emphasis on learning while interacting with an environment,
+in this case with an opponent player. Second, there is a clear goal, and correct behavior
+requires planning or foresight that takes into account delayed eﬀects of one’s choices. For example, the simple reinforcement learning player would learn to set up multi-move
+traps for a shortsighted opponent. It is a striking feature of the reinforcement learning
+solution that it can achieve the eﬀects of planning and lookahead without using a model
+of the opponent and without conducting an explicit search over possible sequences of
+future states and actions. While this example illustrates some of the key features of reinforcement learning, it is
+so simple that it might give the impression that reinforcement learning is more limited
+than it really is. Although tic-tac-toe is a two-person game, reinforcement learning also
+applies in the case in which there is no external adversary, that is, in the case of a
+“game against nature.”
+Reinforcement learning also is not restricted to problems in
+which behavior breaks down into separate episodes, like the separate games of tic-tac-
+toe, with reward only at the end of each episode. It is just as applicable when behavior
+continues indeﬁnitely and when rewards of various magnitudes can be received at any
+time. Reinforcement learning is also applicable to problems that do not even break
+down into discrete time steps, like the plays of tic-tac-toe. The general principles apply
+to continuous-time problems as well, although the theory gets more complicated and we
+omit it from this introductory treatment. Tic-tac-toe has a relatively small, ﬁnite state set, whereas reinforcement learning can
+be used when the state set is very large, or even inﬁnite.
+
+--- Context Source 5 ---
+nt learning an interest
+in circumventing the classical shortcomings of dynamic programming. We would consider all of the work in optimal control also to be, in a sense, work
+in reinforcement learning. We deﬁne a reinforcement learning method as any eﬀective
+way of solving reinforcement learning problems, and it is now clear that these problems
+are closely related to optimal control problems, particularly stochastic optimal control
+problems such as those formulated as MDPs. Accordingly, we must consider the solution
+methods of optimal control, such as dynamic programming, also to be reinforcement
+learning methods. Because almost all of the conventional methods require complete
+knowledge of the system to be controlled, it feels a little unnatural to say that they
+are part of reinforcement learning. On the other hand, many dynamic programming
+algorithms are incremental and iterative. Like learning methods, they gradually reach
+the correct answer through successive approximations. As we show in the rest of this
+book, these similarities are far more than superﬁcial. The theories and solution methods
+for the cases of complete and incomplete knowledge are so closely related that we feel
+they must be considered together as part of the same subject matter. Let us return now to the other major thread leading to the modern ﬁeld of reinforce-
+ment learning, that centered on the idea of trial-and-error learning. We only touch on
+the major points of contact here, taking up this topic in more detail in Section 14.3. According to American psychologist R. S. Woodworth the idea of trial-and-error learn-
+ing goes as far back as the 1850s to Alexander Bain’s discussion of learning by “groping
+and experiment” and more explicitly to the British ethologist and psychologist Conway
+Lloyd Morgan’s 1894 use of the term to describe his observations of animal behavior
+(Woodworth, 1938).
+
+
+**User Question:**
+
+"What is the basic idea of reinforcement learning?"
+
+---
+
+**Answer:**

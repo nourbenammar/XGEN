@@ -1,0 +1,153 @@
+**Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+**Context Chunks:**
+
+--- Context Source 1 ---
+961) in commenting on Samuel’s checkers player. In
+a footnote, Minsky mentioned that it is possible to apply DP to problems in which
+Samuel’s backing-up process can be handled in closed analytic form. This remark may
+have misled artiﬁcial intelligence researchers into believing that DP was restricted to
+analytically tractable problems and therefore largely irrelevant to artiﬁcial intelligence. Andreae (1969b) mentioned DP in the context of reinforcement learning, speciﬁcally
+policy iteration, although he did not make speciﬁc connections between DP and learning
+algorithms. Werbos (1977) suggested an approach to approximating DP called “heuristic
+dynamic programming” that emphasizes gradient-descent methods for continuous-state
+problems (Werbos, 1982, 1987, 1988, 1989, 1992). These methods are closely related to
+the reinforcement learning algorithms that we discuss in this book. Watkins (1989) was
+explicit in connecting reinforcement learning to DP, characterizing a class of reinforce-
+ment learning methods as “incremental dynamic programming.”
+4.1–4
+These sections describe well-established DP algorithms that are covered in any
+of the general DP references cited above. The policy improvement theorem and
+the policy iteration algorithm are due to Bellman (1957a) and Howard (1960). Our presentation was inﬂuenced by the local view of policy improvement taken
+by Watkins (1989). Our discussion of value iteration as a form of truncated
+policy iteration is based on the approach of Puterman and Shin (1978), who
+presented a class of algorithms called modiﬁed policy iteration, which includes
+policy iteration and value iteration as special cases. An analysis showing how
+
+90
+Chapter 4: Dynamic Programming
+value iteration can be made to ﬁnd an optimal policy in ﬁnite time is given by
+Bertsekas (1987). Iterative policy evaluation is an example of a classical successive approximation
+algorithm for solving a system of linear equations.
+
+--- Context Source 2 ---
+nctional equation, now often called the Bell-
+man equation. The class of methods for solving optimal control problems by solving
+this equation came to be known as dynamic programming (Bellman, 1957a). Bellman
+(1957b) also introduced the discrete stochastic version of the optimal control problem
+known as Markov decision processes (MDPs), and Ronald Howard (1960) devised the
+policy iteration method for MDPs. All of these are essential elements underlying the
+theory and algorithms of modern reinforcement learning. Dynamic programming is widely considered the only feasible way of solving general
+stochastic optimal control problems. It suﬀers from what Bellman called “the curse of
+dimensionality,” meaning that its computational requirements grow exponentially with
+the number of state variables, but it is still far more eﬃcient and more widely applicable
+than any other general method. Dynamic programming has been extensively developed
+since the late 1950s, including extensions to partially observable MDPs (surveyed by
+Lovejoy, 1991), many applications (surveyed by White, 1985, 1988, 1993), approxima-
+tion methods (surveyed by Rust, 1996), and asynchronous methods (Bertsekas, 1982,
+1983). Many excellent modern treatments of dynamic programming are available (e.g.,
+Bertsekas, 2005, 2012; Puterman, 1994; Ross, 1983; and Whittle, 1982, 1983). Bryson
+(1996) provides an authoritative history of optimal control. Connections between optimal control and dynamic programming, on the one hand,
+and learning, on the other, were slow to be recognized. We cannot be sure about what
+accounted for this separation, but its main cause was likely the separation between the
+disciplines involved and their diﬀerent goals. Also contributing may have been the preva-
+lent view of dynamic programming as an oﬀ-line computation depending essentially on
+accurate system models and analytic solutions to the Bellman equation.
+
+--- Context Source 3 ---
+y greedy with respect to the current value function (policy improvement). In policy
+iteration, these two processes alternate, each completing before the other begins, but
+this is not really necessary. In value iteration, for example, only a single iteration of
+policy evaluation is performed in between each policy improvement. In asynchronous
+DP methods, the evaluation and improvement processes are interleaved at an even ﬁner
+grain. In some cases a single state is updated in one process before returning to the
+other. As long as both processes continue to update all states, the ultimate result is
+typically the same—convergence to the optimal value function and an optimal policy. evaluation
+improvement
+⇡  greedy(V )
+V
+⇡
+V  v⇡
+v⇤
+⇡⇤
+We use the term generalized policy iteration (GPI) to refer
+to the general idea of letting policy evaluation and policy im-
+provement processes interact, independent of the granularity and
+other details of the two processes. Almost all reinforcement
+learning methods are well described as GPI. That is, all have
+identiﬁable policies and value functions, with the policy always
+being improved with respect to the value function and the value
+function always being driven toward the value function for the
+policy, as suggested by the diagram to the right. It is easy to
+see that if both the evaluation process and the improvement
+process stabilize, that is, no longer produce changes, then the
+value function and policy must be optimal. The value function
+stabilizes only when it is consistent with the current policy, and
+the policy stabilizes only when it is greedy with respect to the
+current value function. Thus, both processes stabilize only when a policy has been found
+that is greedy with respect to its own evaluation function. This implies that the Bell-
+man optimality equation (4.1) holds, and thus that the policy and the value function are
+optimal. The evaluation and improvement processes in GPI can be viewed as both competing
+and cooperating.
+
+--- Context Source 4 ---
+apply widely. For example, afterstate methods are still aptly described in terms
+of generalized policy iteration, with a policy and (afterstate) value function interacting
+in essentially the same way. In many cases one will still face the choice between on-policy
+and oﬀ-policy methods for managing the need for persistent exploration. Exercise 6.14
+Describe how the task of Jack’s Car Rental (Example 4.2) could be
+reformulated in terms of afterstates. Why, in terms of this speciﬁc task, would such a
+reformulation be likely to speed convergence? □
+6.9
+Summary
+In this chapter we introduced a new kind of learning method, temporal-diﬀerence (TD)
+learning, and showed how it can be applied to the reinforcement learning problem. As
+usual, we divided the overall problem into a prediction problem and a control problem. TD methods are alternatives to Monte Carlo methods for solving the prediction problem. In both cases, the extension to the control problem is via the idea of generalized policy
+iteration (GPI) that we abstracted from dynamic programming. This is the idea that
+
+138
+Chapter 6: Temporal-Diﬀerence Learning
+approximate policy and value functions should interact in such a way that they both
+move toward their optimal values. One of the two processes making up GPI drives the value function to accurately
+predict returns for the current policy; this is the prediction problem. The other process
+drives the policy to improve locally (e.g., to be ε-greedy) with respect to the current value
+function. When the ﬁrst process is based on experience, a complication arises concerning
+maintaining suﬃcient exploration. We can classify TD control methods according to
+whether they deal with this complication by using an on-policy or oﬀ-policy approach. Sarsa is an on-policy method, and Q-learning is an oﬀ-policy method. Expected Sarsa
+is also an oﬀ-policy method as we present it here.
+
+--- Context Source 5 ---
+e of policy can result in more clicks by a
+user over repeated visits to the site, and if the policy is suitably designed, more eventual
+sales. Working at Adobe Systems Incorporated, Theocharous et al. conducted experiments
+to see if policies designed to maximize clicks over the long term could in fact improve over
+short-term greedy policies. The Adobe Marketing Cloud, a set of tools that many com-
+panies use to run digital marketing campaigns, provides infrastructure for automating
+user-targed advertising and fund-raising campaigns. Actually deploying novel policies
+using these tools entails signiﬁcant risk because a new policy may end up performing
+poorly. For this reason, the research team needed to assess what a policy’s performance
+would be if it were to be actually deployed, but to do so on the basis of data collected
+under the execution of other policies. A critical aspect of this research, then, was oﬀ-
+policy evaluation. Further, the team wanted to do this with high conﬁdence to reduce
+the risk of deploying a new policy. Although high conﬁdence oﬀ-policy evaluation was a
+central component of this research (see also Thomas, 2015; Thomas, Theocharous, and
+Ghavamzadeh, 2015), here we focus only on the algorithms and their results. Theocharous et al. compared the results of two algorithms for learning ad recommen-
+dation policies. The ﬁrst algorithm, which they called greedy optimization, had the goal
+
+456
+Chapter 16: Applications and Case Studies
+of maximizing only the probability of immediate clicks. As in the standard contextual
+bandit formulation, this algorithm did not take the long-term eﬀects of recommendations
+into account. The other algorithm, a reinforcement learning algorithm based on an MDP
+formulation, aimed at improving the number of clicks users made over multiple visits to
+a website. They called this latter algorithm life-time value (LTV) optimization.
+
+
+**User Question:**
+
+"What is policy evaluation in dynamic programming?"
+
+---
+
+**Answer:**

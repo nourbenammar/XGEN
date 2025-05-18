@@ -1,0 +1,1 @@
+Policy evaluation in dynamic programming is the iterative computation of the value functions for a given policy.

@@ -1,0 +1,461 @@
+2025-05-01 18:22:59,263 - INFO - QUERY: 'What is the basic idea of reinforcement learning?' for document 9
+2025-05-01 18:22:59,265 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-01 18:22:59,268 - INFO - Document has 17 chapters
+2025-05-01 18:22:59,276 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-01 18:22:59,277 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-01 18:22:59,278 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-01 18:22:59,279 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-01 18:22:59,279 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-01 18:22:59,280 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-01 18:22:59,281 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-01 18:22:59,282 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-01 18:22:59,283 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-01 18:22:59,284 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-01 18:22:59,285 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-01 18:22:59,286 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-01 18:22:59,287 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-01 18:22:59,293 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-01 18:22:59,295 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-01 18:22:59,295 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-01 18:22:59,296 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-01 18:23:00,963 - INFO - Likely search terms: what, basic, idea, reinforcement, learning?
+2025-05-01 18:23:00,963 - INFO - Embedding norm: 1.0000
+2025-05-01 18:23:00,964 - INFO - Non-zero elements: 381/384
+2025-05-01 18:23:01,217 - INFO - Retrieved 5 chunks
+2025-05-01 18:23:01,218 - INFO - Saved chunks to app/debug_logs/chunks_20250501_182301.json
+2025-05-01 18:23:01,218 - INFO - Top chunk 1 (ID: 6894, Score: 0.6251):
+2025-05-01 18:23:01,218 - INFO - Text snippet: body of this book develops
+the ideas of reinforcement learning that pertain to engineering and artiﬁ...
+2025-05-01 18:23:01,218 - INFO - Top chunk 2 (ID: 7461, Score: 0.6086):
+2025-05-01 18:23:01,218 - INFO - Text snippet: aspects of behavior studied by ethologists and behav-
+ioral ecologists: how animals relate to one an...
+2025-05-01 18:23:01,218 - INFO - Top chunk 3 (ID: 6891, Score: 0.6007):
+2025-05-01 18:23:01,219 - INFO - Text snippet: inforcement learning, but
+by itself does not address the reinforcement learning problem of maximizin...
+2025-05-01 18:23:01,235 - INFO - Saved prompt to app/debug_logs/prompt_20250501_182301.txt
+2025-05-01 18:23:01,235 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-01 18:23:04,604 - INFO - Saved LLM response to app/debug_logs/response_20250501_182304.txt
+2025-05-01 18:23:04,604 - INFO - Response preview: Reinforcement learning is a machine learning paradigm focused on a goal-directed agent interacting with an uncertain environment.  It involves a trade-off between exploration (trying new actions) and ...
+2025-05-01 18:23:07,593 - INFO - QUERY: 'How do Monte Carlo methods estimate value functions?' for document 9
+2025-05-01 18:23:07,594 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-01 18:23:07,596 - INFO - Document has 17 chapters
+2025-05-01 18:23:07,598 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-01 18:23:07,599 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-01 18:23:07,600 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-01 18:23:07,602 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-01 18:23:07,603 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-01 18:23:07,605 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-01 18:23:07,606 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-01 18:23:07,607 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-01 18:23:07,608 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-01 18:23:07,609 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-01 18:23:07,611 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-01 18:23:07,612 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-01 18:23:07,613 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-01 18:23:07,614 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-01 18:23:07,617 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-01 18:23:07,618 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-01 18:23:07,619 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-01 18:23:07,628 - INFO - Likely search terms: monte, carlo, methods, estimate, value, functions?
+2025-05-01 18:23:07,629 - INFO - Embedding norm: 1.0000
+2025-05-01 18:23:07,629 - INFO - Non-zero elements: 381/384
+2025-05-01 18:23:07,712 - INFO - Retrieved 5 chunks
+2025-05-01 18:23:07,713 - INFO - Saved chunks to app/debug_logs/chunks_20250501_182307.json
+2025-05-01 18:23:07,713 - INFO - Top chunk 1 (ID: 7030, Score: 0.5793):
+2025-05-01 18:23:07,713 - INFO - Text snippet: 92
+Chapter 5: Monte Carlo Methods
+To handle the nonstationarity, we adapt the idea of general policy...
+2025-05-01 18:23:07,713 - INFO - Top chunk 2 (ID: 7071, Score: 0.5790):
+2025-05-01 18:23:07,713 - INFO - Text snippet: s
+DP methods use an estimate of (6.4) as a target. The Monte Carlo target is an estimate
+because the...
+2025-05-01 18:23:07,713 - INFO - Top chunk 3 (ID: 7066, Score: 0.5140):
+2025-05-01 18:23:07,714 - INFO - Text snippet: e state set (we explore this further in
+Chapter 8). A fourth advantage of Monte Carlo methods, which...
+2025-05-01 18:23:07,725 - INFO - Saved prompt to app/debug_logs/prompt_20250501_182307.txt
+2025-05-01 18:23:07,725 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-01 18:23:08,788 - INFO - Saved LLM response to app/debug_logs/response_20250501_182308.txt
+2025-05-01 18:23:08,788 - INFO - Response preview: Monte Carlo methods estimate state-value functions by averaging the returns observed after visits to a state.  The first-visit MC method averages returns following the first visit to a state, while th...
+2025-05-01 18:23:10,072 - INFO - QUERY: 'What is reinforcement learning?' for document 9
+2025-05-01 18:23:10,074 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-01 18:23:10,075 - INFO - Document has 17 chapters
+2025-05-01 18:23:10,076 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-01 18:23:10,078 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-01 18:23:10,079 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-01 18:23:10,080 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-01 18:23:10,081 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-01 18:23:10,082 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-01 18:23:10,083 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-01 18:23:10,085 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-01 18:23:10,086 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-01 18:23:10,088 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-01 18:23:10,089 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-01 18:23:10,090 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-01 18:23:10,091 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-01 18:23:10,092 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-01 18:23:10,094 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-01 18:23:10,095 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-01 18:23:10,096 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-01 18:23:10,109 - INFO - Likely search terms: what, reinforcement, learning?
+2025-05-01 18:23:10,110 - INFO - Embedding norm: 1.0000
+2025-05-01 18:23:10,110 - INFO - Non-zero elements: 381/384
+2025-05-01 18:23:10,186 - INFO - Retrieved 5 chunks
+2025-05-01 18:23:10,187 - INFO - Saved chunks to app/debug_logs/chunks_20250501_182310.json
+2025-05-01 18:23:10,187 - INFO - Top chunk 1 (ID: 6889, Score: 0.6842):
+2025-05-01 18:23:10,188 - INFO - Text snippet: 2
+Chapter 1: Introduction
+reward but also the next situation and, through that, all subsequent rewar...
+2025-05-01 18:23:10,188 - INFO - Top chunk 2 (ID: 6893, Score: 0.6345):
+2025-05-01 18:23:10,188 - INFO - Text snippet:  agent can also be a component of a larger behaving system. In this case,
+the agent directly interac...
+2025-05-01 18:23:10,188 - INFO - Top chunk 3 (ID: 6900, Score: 0.5759):
+2025-05-01 18:23:10,188 - INFO - Text snippet:  almost the opposite of planning. In Chapter 8 we explore reinforcement learning systems that simult...
+2025-05-01 18:23:10,207 - INFO - Saved prompt to app/debug_logs/prompt_20250501_182310.txt
+2025-05-01 18:23:10,207 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-01 18:23:11,702 - INFO - Saved LLM response to app/debug_logs/response_20250501_182311.txt
+2025-05-01 18:23:11,702 - INFO - Response preview: Reinforcement learning is a problem, a class of solution methods, and a field of study.  It involves trial-and-error search and delayed reward,  distinguishing it from supervised learning.  It's the o...
+2025-05-01 18:23:12,612 - INFO - QUERY: 'What is the basic idea of reinforcement learning?' for document 9
+2025-05-01 18:23:12,613 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-01 18:23:12,614 - INFO - Document has 17 chapters
+2025-05-01 18:23:12,617 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-01 18:23:12,618 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-01 18:23:12,620 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-01 18:23:12,622 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-01 18:23:12,626 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-01 18:23:12,627 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-01 18:23:12,629 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-01 18:23:12,633 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-01 18:23:12,634 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-01 18:23:12,637 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-01 18:23:12,640 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-01 18:23:12,643 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-01 18:23:12,647 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-01 18:23:12,651 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-01 18:23:12,652 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-01 18:23:12,655 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-01 18:23:12,658 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-01 18:23:12,678 - INFO - Likely search terms: what, basic, idea, reinforcement, learning?
+2025-05-01 18:23:12,678 - INFO - Embedding norm: 1.0000
+2025-05-01 18:23:12,680 - INFO - Non-zero elements: 381/384
+2025-05-01 18:23:12,840 - INFO - Retrieved 5 chunks
+2025-05-01 18:23:12,841 - INFO - Saved chunks to app/debug_logs/chunks_20250501_182312.json
+2025-05-01 18:23:12,841 - INFO - Top chunk 1 (ID: 6889, Score: 0.6604):
+2025-05-01 18:23:12,841 - INFO - Text snippet: 2
+Chapter 1: Introduction
+reward but also the next situation and, through that, all subsequent rewar...
+2025-05-01 18:23:12,841 - INFO - Top chunk 2 (ID: 6893, Score: 0.6515):
+2025-05-01 18:23:12,842 - INFO - Text snippet:  agent can also be a component of a larger behaving system. In this case,
+the agent directly interac...
+2025-05-01 18:23:12,842 - INFO - Top chunk 3 (ID: 7459, Score: 0.6389):
+2025-05-01 18:23:12,842 - INFO - Text snippet: rning agents. There is also a connection to the idea of an animal’s motivational state,
+which inﬂuen...
+2025-05-01 18:23:12,860 - INFO - Saved prompt to app/debug_logs/prompt_20250501_182312.txt
+2025-05-01 18:23:12,860 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-01 18:23:13,955 - INFO - Saved LLM response to app/debug_logs/response_20250501_182313.txt
+2025-05-01 18:23:13,956 - INFO - Response preview: The basic idea is to capture the most important aspects of a learning agent interacting with its environment over time to achieve a goal.  This involves sensing the environment's state, taking actions...
+2025-05-01 18:23:14,537 - INFO - QUERY: 'What is Temporal-Diﬀerence Learning?' for document 9
+2025-05-01 18:23:14,538 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-01 18:23:14,539 - INFO - Document has 17 chapters
+2025-05-01 18:23:14,540 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-01 18:23:14,541 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-01 18:23:14,542 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-01 18:23:14,543 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-01 18:23:14,544 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-01 18:23:14,546 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-01 18:23:14,547 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-01 18:23:14,548 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-01 18:23:14,550 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-01 18:23:14,551 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-01 18:23:14,553 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-01 18:23:14,554 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-01 18:23:14,556 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-01 18:23:14,557 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-01 18:23:14,558 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-01 18:23:14,559 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-01 18:23:14,560 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-01 18:23:14,570 - INFO - Likely search terms: what, temporal-diﬀerence, learning?
+2025-05-01 18:23:14,571 - INFO - Embedding norm: 1.0000
+2025-05-01 18:23:14,571 - INFO - Non-zero elements: 381/384
+2025-05-01 18:23:14,679 - INFO - Retrieved 5 chunks
+2025-05-01 18:23:14,680 - INFO - Saved chunks to app/debug_logs/chunks_20250501_182314.json
+2025-05-01 18:23:14,681 - INFO - Top chunk 1 (ID: 7443, Score: 0.6157):
+2025-05-01 18:23:14,681 - INFO - Text snippet: 4.4
+Delayed Reinforcement
+The Law of Eﬀect requires a backward eﬀect on connections, and some early ...
+2025-05-01 18:23:14,681 - INFO - Top chunk 2 (ID: 6929, Score: 0.5854):
+2025-05-01 18:23:14,681 - INFO - Text snippet: ing a distinct
+early contribution to temporal-diﬀerence learning. The temporal-diﬀerence and optimal...
+2025-05-01 18:23:14,681 - INFO - Top chunk 3 (ID: 6926, Score: 0.5702):
+2025-05-01 18:23:14,681 - INFO - Text snippet: aller and less distinct than the other two, but it has played a particularly
+important role in the ﬁ...
+2025-05-01 18:23:14,701 - INFO - Saved prompt to app/debug_logs/prompt_20250501_182314.txt
+2025-05-01 18:23:14,701 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-01 18:23:16,218 - INFO - QUERY: 'What is Q-Learning?' for document 9
+2025-05-01 18:23:16,220 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-01 18:23:16,222 - INFO - Document has 17 chapters
+2025-05-01 18:23:16,225 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-01 18:23:16,227 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-01 18:23:16,228 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-01 18:23:16,229 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-01 18:23:16,230 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-01 18:23:16,232 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-01 18:23:16,233 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-01 18:23:16,235 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-01 18:23:16,236 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-01 18:23:16,237 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-01 18:23:16,238 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-01 18:23:16,239 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-01 18:23:16,240 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-01 18:23:16,241 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-01 18:23:16,243 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-01 18:23:16,244 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-01 18:23:16,245 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-01 18:23:16,255 - INFO - Likely search terms: what, q-learning?
+2025-05-01 18:23:16,255 - INFO - Embedding norm: 1.0000
+2025-05-01 18:23:16,256 - INFO - Non-zero elements: 381/384
+2025-05-01 18:23:16,427 - INFO - Saved LLM response to app/debug_logs/response_20250501_182316.txt
+2025-05-01 18:23:16,428 - INFO - Response preview: Temporal-difference learning is partially rooted in animal learning psychology, specifically the concept of secondary reinforcers (stimuli paired with primary reinforcers that acquire similar reinforc...
+2025-05-01 18:23:16,441 - INFO - Retrieved 5 chunks
+2025-05-01 18:23:16,442 - INFO - Saved chunks to app/debug_logs/chunks_20250501_182316.json
+2025-05-01 18:23:16,442 - INFO - Top chunk 1 (ID: 7591, Score: 0.6048):
+2025-05-01 18:23:16,442 - INFO - Text snippet: e semi-gradient form of Q-learning. TD-Gammon estimated the values of
+
+442
+Chapter 16: Applications ...
+2025-05-01 18:23:16,442 - INFO - Top chunk 2 (ID: 7596, Score: 0.5500):
+2025-05-01 18:23:16,442 - INFO - Text snippet: experience replay ﬁrst studied by Lin (1992). This method stores the
+agent’s experience at each time...
+2025-05-01 18:23:16,442 - INFO - Top chunk 3 (ID: 7294, Score: 0.5448):
+2025-05-01 18:23:16,443 - INFO - Text snippet:  1;
+see Chapter 12) but often bootstrapping greatly increases eﬃciency. It is an ability that
+we wou...
+2025-05-01 18:23:16,461 - INFO - Saved prompt to app/debug_logs/prompt_20250501_182316.txt
+2025-05-01 18:23:16,461 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-01 18:23:18,004 - INFO - Saved LLM response to app/debug_logs/response_20250501_182318.txt
+2025-05-01 18:23:18,005 - INFO - Response preview: Based on the provided text, Q-learning is a model-free, off-policy algorithm used in reinforcement learning.  It was extended and integrated from prior work in reinforcement learning research in 1989 ...
+2025-05-01 18:23:18,314 - INFO - QUERY: 'What is reinforcement learning?' for document 9
+2025-05-01 18:23:18,315 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-01 18:23:18,317 - INFO - Document has 17 chapters
+2025-05-01 18:23:18,319 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-01 18:23:18,321 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-01 18:23:18,323 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-01 18:23:18,325 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-01 18:23:18,328 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-01 18:23:18,333 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-01 18:23:18,339 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-01 18:23:18,343 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-01 18:23:18,345 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-01 18:23:18,347 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-01 18:23:18,349 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-01 18:23:18,351 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-01 18:23:18,354 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-01 18:23:18,356 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-01 18:23:18,358 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-01 18:23:18,363 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-01 18:23:18,366 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-01 18:23:18,388 - INFO - Likely search terms: what, reinforcement, learning?
+2025-05-01 18:23:18,389 - INFO - Embedding norm: 1.0000
+2025-05-01 18:23:18,390 - INFO - Non-zero elements: 381/384
+2025-05-01 18:23:18,539 - INFO - Retrieved 5 chunks
+2025-05-01 18:23:18,540 - INFO - Saved chunks to app/debug_logs/chunks_20250501_182318.json
+2025-05-01 18:23:18,541 - INFO - Top chunk 1 (ID: 6889, Score: 0.6842):
+2025-05-01 18:23:18,541 - INFO - Text snippet: 2
+Chapter 1: Introduction
+reward but also the next situation and, through that, all subsequent rewar...
+2025-05-01 18:23:18,541 - INFO - Top chunk 2 (ID: 7472, Score: 0.6417):
+2025-05-01 18:23:18,541 - INFO - Text snippet: cation therapy. Of course, both of these directions of control are at play when an agent interacts w...
+2025-05-01 18:23:18,541 - INFO - Top chunk 3 (ID: 6893, Score: 0.6345):
+2025-05-01 18:23:18,541 - INFO - Text snippet:  agent can also be a component of a larger behaving system. In this case,
+the agent directly interac...
+2025-05-01 18:23:18,561 - INFO - Saved prompt to app/debug_logs/prompt_20250501_182318.txt
+2025-05-01 18:23:18,561 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-01 18:23:19,996 - INFO - Saved LLM response to app/debug_logs/response_20250501_182319.txt
+2025-05-01 18:23:19,997 - INFO - Response preview: Reinforcement learning is a problem, a class of solution methods, and a field of study.  It's characterized by trial-and-error search and delayed reward.  It involves an agent sensing its environment,...
+2025-05-01 18:23:39,395 - INFO - QUERY: 'What is policy evaluation in dynamic programming?' for document 9
+2025-05-01 18:23:39,396 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-01 18:23:39,398 - INFO - Document has 17 chapters
+2025-05-01 18:23:39,400 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-01 18:23:39,402 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-01 18:23:39,404 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-01 18:23:39,406 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-01 18:23:39,407 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-01 18:23:39,408 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-01 18:23:39,410 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-01 18:23:39,412 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-01 18:23:39,414 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-01 18:23:39,417 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-01 18:23:39,419 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-01 18:23:39,421 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-01 18:23:39,423 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-01 18:23:39,425 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-01 18:23:39,427 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-01 18:23:39,429 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-01 18:23:39,431 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-01 18:23:39,448 - INFO - Likely search terms: what, policy, evaluation, dynamic, programming?
+2025-05-01 18:23:39,449 - INFO - Embedding norm: 1.0000
+2025-05-01 18:23:39,450 - INFO - Non-zero elements: 381/384
+2025-05-01 18:23:39,541 - INFO - Retrieved 5 chunks
+2025-05-01 18:23:39,541 - INFO - Saved chunks to app/debug_logs/chunks_20250501_182339.json
+2025-05-01 18:23:39,542 - INFO - Top chunk 1 (ID: 7028, Score: 0.5868):
+2025-05-01 18:23:39,542 - INFO - Text snippet: 961) in commenting on Samuel’s checkers player. In
+a footnote, Minsky mentioned that it is possible ...
+2025-05-01 18:23:39,542 - INFO - Top chunk 2 (ID: 6913, Score: 0.5665):
+2025-05-01 18:23:39,542 - INFO - Text snippet: nctional equation, now often called the Bell-
+man equation. The class of methods for solving optimal...
+2025-05-01 18:23:39,542 - INFO - Top chunk 3 (ID: 7022, Score: 0.5482):
+2025-05-01 18:23:39,542 - INFO - Text snippet: y greedy with respect to the current value function (policy improvement). In policy
+iteration, these...
+2025-05-01 18:23:39,555 - INFO - Saved prompt to app/debug_logs/prompt_20250501_182339.txt
+2025-05-01 18:23:39,555 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-01 18:23:40,787 - INFO - Saved LLM response to app/debug_logs/response_20250501_182340.txt
+2025-05-01 18:23:40,787 - INFO - Response preview: Policy evaluation, in dynamic programming, is one process within generalized policy iteration (GPI).  It drives the value function to accurately predict returns for the current policy; this is the pre...
+2025-05-01 18:23:40,873 - INFO - QUERY: 'What is Temporal-Diﬀerence Learning?' for document 9
+2025-05-01 18:23:40,877 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-01 18:23:40,881 - INFO - Document has 17 chapters
+2025-05-01 18:23:40,887 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-01 18:23:40,889 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-01 18:23:40,891 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-01 18:23:40,893 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-01 18:23:40,894 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-01 18:23:40,896 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-01 18:23:40,898 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-01 18:23:40,901 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-01 18:23:40,904 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-01 18:23:40,908 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-01 18:23:40,914 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-01 18:23:40,919 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-01 18:23:40,922 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-01 18:23:40,924 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-01 18:23:40,926 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-01 18:23:40,928 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-01 18:23:40,930 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-01 18:23:40,950 - INFO - Likely search terms: what, temporal-diﬀerence, learning?
+2025-05-01 18:23:40,950 - INFO - Embedding norm: 1.0000
+2025-05-01 18:23:40,951 - INFO - Non-zero elements: 381/384
+2025-05-01 18:23:41,127 - INFO - Retrieved 5 chunks
+2025-05-01 18:23:41,129 - INFO - Saved chunks to app/debug_logs/chunks_20250501_182341.json
+2025-05-01 18:23:41,129 - INFO - Top chunk 1 (ID: 7443, Score: 0.6157):
+2025-05-01 18:23:41,129 - INFO - Text snippet: 4.4
+Delayed Reinforcement
+The Law of Eﬀect requires a backward eﬀect on connections, and some early ...
+2025-05-01 18:23:41,129 - INFO - Top chunk 2 (ID: 6929, Score: 0.5854):
+2025-05-01 18:23:41,130 - INFO - Text snippet: ing a distinct
+early contribution to temporal-diﬀerence learning. The temporal-diﬀerence and optimal...
+2025-05-01 18:23:41,130 - INFO - Top chunk 3 (ID: 6926, Score: 0.5702):
+2025-05-01 18:23:41,130 - INFO - Text snippet: aller and less distinct than the other two, but it has played a particularly
+important role in the ﬁ...
+2025-05-01 18:23:41,156 - INFO - Saved prompt to app/debug_logs/prompt_20250501_182341.txt
+2025-05-01 18:23:41,157 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-01 18:23:42,629 - INFO - QUERY: 'What is policy evaluation in dynamic programming?' for document 9
+2025-05-01 18:23:42,631 - INFO - Saved LLM response to app/debug_logs/response_20250501_182342.txt
+2025-05-01 18:23:42,632 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-01 18:23:42,632 - INFO - Response preview: Temporal-difference learning is partly rooted in animal learning psychology, specifically the concept of secondary reinforcers – stimuli paired with primary reinforcers (like food or pain) that acquir...
+2025-05-01 18:23:42,634 - INFO - Document has 17 chapters
+2025-05-01 18:23:42,643 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-01 18:23:42,647 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-01 18:23:42,650 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-01 18:23:42,653 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-01 18:23:42,655 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-01 18:23:42,658 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-01 18:23:42,660 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-01 18:23:42,661 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-01 18:23:42,663 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-01 18:23:42,665 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-01 18:23:42,668 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-01 18:23:42,671 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-01 18:23:42,673 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-01 18:23:42,676 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-01 18:23:42,678 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-01 18:23:42,680 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-01 18:23:42,683 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-01 18:23:42,709 - INFO - Likely search terms: what, policy, evaluation, dynamic, programming?
+2025-05-01 18:23:42,709 - INFO - Embedding norm: 1.0000
+2025-05-01 18:23:42,711 - INFO - Non-zero elements: 381/384
+2025-05-01 18:23:42,973 - INFO - Retrieved 5 chunks
+2025-05-01 18:23:42,974 - INFO - Saved chunks to app/debug_logs/chunks_20250501_182342.json
+2025-05-01 18:23:42,974 - INFO - Top chunk 1 (ID: 7023, Score: 0.5562):
+2025-05-01 18:23:42,974 - INFO - Text snippet: Bell-
+man optimality equation (4.1) holds, and thus that the policy and the value function are
+optim...
+2025-05-01 18:23:42,974 - INFO - Top chunk 2 (ID: 7066, Score: 0.5495):
+2025-05-01 18:23:42,975 - INFO - Text snippet: e state set (we explore this further in
+Chapter 8). A fourth advantage of Monte Carlo methods, which...
+2025-05-01 18:23:42,975 - INFO - Top chunk 3 (ID: 7025, Score: 0.5169):
+2025-05-01 18:23:42,975 - INFO - Text snippet: mputers to solve MDPs with
+millions of states. Both policy iteration and value iteration are widely ...
+2025-05-01 18:23:43,013 - INFO - Saved prompt to app/debug_logs/prompt_20250501_182343.txt
+2025-05-01 18:23:43,013 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-01 18:23:43,653 - INFO - Saved LLM response to app/debug_logs/response_20250501_182343.txt
+2025-05-01 18:23:43,653 - INFO - Response preview: Policy evaluation in dynamic programming is the iterative computation of the value functions for a given policy....
+2025-05-01 18:23:46,342 - INFO - QUERY: 'What is the basic idea of reinforcement learning?' for document 9
+2025-05-01 18:23:46,343 - INFO - Document: Reinforcement Learning, 548 pages
+2025-05-01 18:23:46,344 - INFO - Document has 17 chapters
+2025-05-01 18:23:46,346 - INFO - Chapter 137: Chapter 1: Introduction, pages 22-44, 43 chunks
+2025-05-01 18:23:46,348 - INFO - Chapter 138: Chapter 2: Multi-armed Bandits, pages 46-66, 30 chunks
+2025-05-01 18:23:46,349 - INFO - Chapter 139: Chapter 3: Finite Markov Decision Processes, pages 68-92, 42 chunks
+2025-05-01 18:23:46,351 - INFO - Chapter 140: Chapter 4: Dynamic Programming, pages 94-110, 26 chunks
+2025-05-01 18:23:46,352 - INFO - Chapter 141: Chapter 5: Monte Carlo Methods, pages 112-138, 40 chunks
+2025-05-01 18:23:46,354 - INFO - Chapter 142: Chapter 6: Temporal-Diﬀerence Learning, pages 140-160, 34 chunks
+2025-05-01 18:23:46,356 - INFO - Chapter 143: Chapter 7: n-step Bootstrapping, pages 162-178, 23 chunks
+2025-05-01 18:23:46,357 - INFO - Chapter 144: Chapter 8: Planning and Learning with Tabular Methods, pages 180-216, 61 chunks
+2025-05-01 18:23:46,358 - INFO - Chapter 145: Chapter 9: On-policy Prediction with Approximation, pages 218-262, 75 chunks
+2025-05-01 18:23:46,360 - INFO - Chapter 146: Chapter 10: On-policy Control with Approximation, pages 264-278, 19 chunks
+2025-05-01 18:23:46,361 - INFO - Chapter 147: Chapter 11: *Oﬀ-policy Methods with Approximation, pages 280-308, 55 chunks
+2025-05-01 18:23:46,362 - INFO - Chapter 148: Chapter 12: Eligibility Traces, pages 310-342, 44 chunks
+2025-05-01 18:23:46,364 - INFO - Chapter 149: Chapter 13: Policy Gradient Methods, pages 344-364, 24 chunks
+2025-05-01 18:23:46,366 - INFO - Chapter 150: Chapter 14: Psychology, pages 366-400, 68 chunks
+2025-05-01 18:23:46,368 - INFO - Chapter 151: Chapter 15: Neuroscience, pages 402-444, 84 chunks
+2025-05-01 18:23:46,369 - INFO - Chapter 152: Chapter 16: Applications and Case Studies, pages 446-482, 72 chunks
+2025-05-01 18:23:46,370 - INFO - Chapter 153: Chapter 17: Frontiers, pages 484-548, 121 chunks
+2025-05-01 18:23:46,385 - INFO - Likely search terms: what, basic, idea, reinforcement, learning?
+2025-05-01 18:23:46,385 - INFO - Embedding norm: 1.0000
+2025-05-01 18:23:46,386 - INFO - Non-zero elements: 381/384
+2025-05-01 18:23:46,481 - INFO - Retrieved 5 chunks
+2025-05-01 18:23:46,482 - INFO - Saved chunks to app/debug_logs/chunks_20250501_182346.json
+2025-05-01 18:23:46,482 - INFO - Top chunk 1 (ID: 6889, Score: 0.6604):
+2025-05-01 18:23:46,482 - INFO - Text snippet: 2
+Chapter 1: Introduction
+reward but also the next situation and, through that, all subsequent rewar...
+2025-05-01 18:23:46,482 - INFO - Top chunk 2 (ID: 6899, Score: 0.6530):
+2025-05-01 18:23:46,482 - INFO - Text snippet: pose of estimating
+values is to achieve more reward. Nevertheless, it is values with which we are mo...
+2025-05-01 18:23:46,482 - INFO - Top chunk 3 (ID: 6893, Score: 0.6515):
+2025-05-01 18:23:46,482 - INFO - Text snippet:  agent can also be a component of a larger behaving system. In this case,
+the agent directly interac...
+2025-05-01 18:23:46,493 - INFO - Saved prompt to app/debug_logs/prompt_20250501_182346.txt
+2025-05-01 18:23:46,493 - INFO - Prompt summary: **Instructions:**
+You are an AI assistant. Answer the User Question accurately and concisely based *only* on the information available in the provided Context Chunks.
+
+...
+2025-05-01 18:23:47,527 - INFO - Saved LLM response to app/debug_logs/response_20250501_182347.txt
+2025-05-01 18:23:47,527 - INFO - Response preview: The basic idea of reinforcement learning is to capture the most important aspects of a learning agent interacting with its environment over time to achieve a goal.  This involves sensing the environme...
