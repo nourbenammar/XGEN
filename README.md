@@ -94,9 +94,9 @@ python app.py
 
 ## 🙌 Acknowledgments
 
-# This work was realized by the AImpact Team as part of the AI for Education course at Esprit School of Engineering.
+#### This work was realized by the AImpact Team as part of the AI for Education course at Esprit School of Engineering.
 
-# Team Members:
+#### Team Members:
 
 Malek Gharsallah
 
