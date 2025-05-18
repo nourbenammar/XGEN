@@ -67,7 +67,7 @@ A structured, dynamic, and personalized education platform developed at **Esprit
 
 ### 1. Clone the repository
 
-git clone https://github.com/nourbenammar/XGEN-AI.git
+git clone https://github.com/nourbenammar/XGEN.git
 cd XGEN-AI
  
 ### 2. Frontend Setup (React)
