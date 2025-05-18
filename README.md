@@ -90,3 +90,22 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 python app.py
+
+
+## 🙌 Acknowledgments
+
+# This work was realized by the AImpact Team as part of the AI for Education course at Esprit School of Engineering.
+
+# Team Members:
+
+Malek Gharsallah
+
+Eya Ben Moulehem
+
+Nadia Trabelsi
+
+Fedi Fehmi
+
+Mohamed Iheb Al hadramy
+
+Nour Ben Ammar
