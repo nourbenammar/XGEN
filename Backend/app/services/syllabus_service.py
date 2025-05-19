@@ -230,7 +230,7 @@ def text_to_syllabus(text, language="english", verbose=True, max_retries=2):
                     prompt += f"\n\n**{'Note' if language.lower() == 'english' else 'Note'}** : {'Ensure the output is a valid JSON object with proper brackets and syntax. Avoid extra text or incomplete structures.' if language.lower() == 'english' else 'Assurez-vous que la sortie est un objet JSON valide avec des crochets et une syntaxe corrects. Évitez tout texte supplémentaire ou structures incomplètes.'}"
             except ValueError as e:
                 logger.error(f"Error in text_to_syllabus attempt {attempt + 1}: {str(e)}")
-                if "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" in str(e) or "Groq client not initialized" in str(e):
+                if "" in str(e) or "Groq client not initialized" in str(e):
                     raise ValueError("Groq API key is missing or invalid. Please set a valid GROQ_API_KEY environment variable.")
                 if attempt == max_retries - 1:
                     raise ValueError(f"Failed to generate valid JSON after {max_retries} attempts: {str(e)}")
